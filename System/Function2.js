@@ -1,39 +1,34 @@
-const { proto, delay, getContentType } = require("baileysjs");
-const chalk = require("chalk");
-const fs = require("fs");
-const { unlink } = require("fs").promises;
-const axios = require("axios");
-const moment = require("moment-timezone");
-const { sizeFormatter } = require("human-readable");
-const util = require("util");
-const Jimp = require("jimp");
-const child_process = require("child_process");
+import baileysjs from "baileysjs";
+const { proto, delay, getContentType } = baileysjs;
+import chalk from "chalk";
+import fs from "fs";
+const { unlink } = fs.promises;
+import axios from "axios";
+import moment from "moment-timezone";
+import { sizeFormatter } from "human-readable";
+import util from "util";
+import Jimp from "jimp";
+import child_process from "child_process";
 
-const unixTimestampSeconds = (date = new Date()) =>
+export const unixTimestampSeconds = (date = new Date()) =>
   Math.floor(date.getTime() / 1000);
-const sleep = (ms) => {
-  return new Promise((resolve) => {
-    setTimeout(resolve, ms);
-  });
-};
 
-exports.unixTimestampSeconds = unixTimestampSeconds;
 
-exports.generateMessageTag = (epoch) => {
-  let tag = (0, exports.unixTimestampSeconds)().toString();
+export const generateMessageTag = (epoch) => {
+  let tag = unixTimestampSeconds().toString();
   if (epoch) tag += ".--" + epoch; // attach epoch if provided
   return tag;
 };
 
-exports.processTime = (timestamp, now) => {
+export const processTime = (timestamp, now) => {
   return moment.duration(now - moment(timestamp * 1000)).asSeconds();
 };
 
-exports.getRandom = (ext) => {
+export const getRandom = (ext) => {
   return `${Math.floor(Math.random() * 10000)}${ext}`;
 };
 
-exports.getBuffer = async (url, options) => {
+export const getBuffer = async (url, options) => {
   try {
     options ? options : {};
     const res = await axios({
@@ -52,7 +47,7 @@ exports.getBuffer = async (url, options) => {
   }
 };
 
-exports.fetchJson = async (url, options) => {
+export const fetchJson = async (url, options) => {
   try {
     options ? options : {};
     const res = await axios({
@@ -70,7 +65,7 @@ exports.fetchJson = async (url, options) => {
   }
 };
 
-exports.runtime = function (seconds) {
+export const runtime = function (seconds) {
   seconds = Number(seconds);
   var d = Math.floor(seconds / (3600 * 24));
   var h = Math.floor((seconds % (3600 * 24)) / 3600);
@@ -83,18 +78,18 @@ exports.runtime = function (seconds) {
   return dDisplay + hDisplay + mDisplay + sDisplay;
 };
 
-exports.clockString = (ms) => {
+export const clockString = (ms) => {
   let h = isNaN(ms) ? "--" : Math.floor(ms / 3600000);
   let m = isNaN(ms) ? "--" : Math.floor(ms / 60000) % 60;
   let s = isNaN(ms) ? "--" : Math.floor(ms / 1000) % 60;
   return [h, m, s].map((v) => v.toString().padStart(2, 0)).join(":");
 };
 
-exports.sleep = async (ms) => {
+export const sleep = async (ms) => {
   return new Promise((resolve) => setTimeout(resolve, ms));
 };
 
-exports.isUrl = (url) => {
+export const isUrl = (url) => {
   return url.match(
     new RegExp(
       /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)/,
@@ -103,7 +98,7 @@ exports.isUrl = (url) => {
   );
 };
 
-exports.getTime = (format, date) => {
+export const getTime = (format, date) => {
   if (date) {
     return moment(date).locale("id").format(format);
   } else {
@@ -111,7 +106,7 @@ exports.getTime = (format, date) => {
   }
 };
 
-exports.formatDate = (n, locale = "id") => {
+export const formatDate = (n, locale = "id") => {
   let d = new Date(n);
   return d.toLocaleDateString(locale, {
     weekday: "long",
@@ -124,7 +119,7 @@ exports.formatDate = (n, locale = "id") => {
   });
 };
 
-exports.tanggal = (numer) => {
+export const tanggal = (numer) => {
   myMonths = [
     "January",
     "February",
@@ -166,14 +161,14 @@ exports.tanggal = (numer) => {
   return `${thisDay}, ${day} - ${myMonths[bulan]} - ${year}`;
 };
 
-exports.formatp = sizeFormatter({
+export const formatp = sizeFormatter({
   std: "JEDEC", //'SI' = default | 'IEC' | 'JEDEC'
   decimalPlaces: 2,
   keepTrailingZeroes: false,
   render: (literal, symbol) => `${literal} ${symbol}B`,
 });
 
-exports.jsonformat = (string) => {
+export const jsonformat = (string) => {
   return JSON.stringify(string, null, 2);
 };
 
@@ -181,14 +176,14 @@ function format(...args) {
   return util.format(...args);
 }
 
-exports.logic = (check, inp, out) => {
+export const logic = (check, inp, out) => {
   if (inp.length !== out.length)
     throw new Error("Input and Output must have same length");
   for (let i in inp) if (util.isDeepStrictEqual(check, inp[i])) return out[i];
   return null;
 };
 
-exports.generateProfilePicture = async (buffer) => {
+export const generateProfilePicture = async (buffer) => {
   const jimp = await Jimp.read(buffer);
   const min = jimp.getWidth();
   const max = jimp.getHeight();
@@ -199,7 +194,7 @@ exports.generateProfilePicture = async (buffer) => {
   };
 };
 
-exports.bytesToSize = (bytes, decimals = 2) => {
+export const bytesToSize = (bytes, decimals = 2) => {
   if (bytes === 0) return "0 Bytes";
 
   const k = 1024;
@@ -211,17 +206,17 @@ exports.bytesToSize = (bytes, decimals = 2) => {
   return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + " " + sizes[i];
 };
 
-exports.getSizeMedia = (path) => {
+export const getSizeMedia = (path) => {
   return new Promise((resolve, reject) => {
     if (/http/.test(path)) {
       axios.get(path).then((res) => {
         let length = parseInt(res.headers["content-length"]);
-        let size = exports.bytesToSize(length, 3);
+        let size = bytesToSize(length, 3);
         if (!isNaN(length)) resolve(size);
       });
     } else if (Buffer.isBuffer(path)) {
       let length = Buffer.byteLength(path);
-      let size = exports.bytesToSize(length, 3);
+      let size = bytesToSize(length, 3);
       if (!isNaN(length)) resolve(size);
     } else {
       reject("error gatau apah");
@@ -229,13 +224,13 @@ exports.getSizeMedia = (path) => {
   });
 };
 
-exports.parseMention = (text = "") => {
+export const parseMention = (text = "") => {
   return [...text.matchAll(/@([0-9]{5,16}|0)/g)].map(
     (v) => v[1] + "@s.whatsapp.net"
   );
 };
 
-exports.GIFBufferToVideoBuffer = async (image) => {
+export const GIFBufferToVideoBuffer = async (image) => {
   const filename = `${Math.random().toString(36)}`;
   await fs.writeFileSync(`./System/Cache/${filename}.gif`, image);
   child_process.exec(
@@ -257,7 +252,7 @@ exports.GIFBufferToVideoBuffer = async (image) => {
  * @param {Object} m
  * @param {store} store
  */
-exports.smsg = (conn, m, store) => {
+export const smsg = (conn, m, store) => {
   if (!m) return m;
   let M = proto.WebMessageInfo;
   if (m.key) {
@@ -327,7 +322,7 @@ exports.smsg = (conn, m, store) => {
       m.getQuotedObj = m.getQuotedMessage = async () => {
         if (!m.quoted.id) return false;
         let q = await store.loadMessage(m.chat, m.quoted.id, conn);
-        return exports.smsg(conn, q, store);
+        return smsg(conn, q, store);
       };
       let vM = (m.quoted.fakeObj = M.fromObject({
         key: {
@@ -385,7 +380,7 @@ exports.smsg = (conn, m, store) => {
   /**
    * Copy this message
    */
-  m.copy = () => exports.smsg(conn, M.fromObject(M.toObject(m)));
+  m.copy = () => smsg(conn, M.fromObject(M.toObject(m)));
 
   /**
    *
@@ -400,10 +395,4 @@ exports.smsg = (conn, m, store) => {
   return m;
 };
 
-let file = require.resolve(__filename);
-fs.watchFile(file, () => {
-  fs.unwatchFile(file);
-  console.log(chalk.redBright(`Update ${__filename}`));
-  delete require.cache[file];
-  require(file);
-});
+// Hot reload unsupported natively in ESM

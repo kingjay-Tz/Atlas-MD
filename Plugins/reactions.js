@@ -1,8 +1,4 @@
-const {
-  fetchJson,
-  getBuffer,
-  GIFBufferToVideoBuffer,
-} = require("../System/Function2.js");
+import {   fetchJson,   getBuffer,   GIFBufferToVideoBuffer, } from "../System/Function2.js";
 
 let mergedCommands = [
   "bite",
@@ -33,7 +29,7 @@ let mergedCommands = [
   "yeet",
 ];
 
-module.exports = {
+export default {
   name: "reactions",
   alias: [...mergedCommands],
   uniquecommands: [

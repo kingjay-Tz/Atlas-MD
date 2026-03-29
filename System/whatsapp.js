@@ -1,17 +1,8 @@
-const {
-  extensionForMediaMessage,
-  extractMessageContent,
-  jidNormalizedUser,
-  getContentType,
-  normalizeMessageContent,
-  proto,
-  delay,
-  downloadContentFromMessage,
-  getBinaryNodeChild,
-} = require("baileysjs");
-const fs = require("fs");
-const FileType = require("file-type");
-const { getRandom, fetchBuffer } = require("./Function");
+import baileysjs from "baileysjs";
+const { extensionForMediaMessage, extractMessageContent, jidNormalizedUser, getContentType, normalizeMessageContent, proto, delay, downloadContentFromMessage, getBinaryNodeChild } = baileysjs;
+import fs from "fs";
+import FileType from "file-type";
+import { getRandom, fetchBuffer } from "./Function.js";
 
 class WAConnection {
   constructor(Atlas) {
@@ -93,9 +84,9 @@ class WAConnection {
     return trueFileName;
   }
 }
-exports.WAConnection = WAConnection;
+export { WAConnection };
 
-exports.serialize = (Atlas, m, options = {}) => {
+export const serialize = (Atlas, m, options = {}) => {
   if (!m) return m;
   let M = proto.WebMessageInfo;
   m = M.fromObject(m);

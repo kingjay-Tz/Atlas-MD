@@ -1,23 +1,6 @@
-const {
-  banUser, //----------------------- BAN
-  checkBan, // --------------------- CHECK BAN STATUS
-  unbanUser, // -------------------- UNBAN
-  addMod, // ----------------------- ADD MOD
-  checkMod, // --------------------- CHECK MOD STATUS
-  delMod, // ----------------------- DEL MOD
-  setChar, // ---------------------- SET CHAR ID
-  getChar, // ---------------------- GET CHAR ID
-  activateChatBot, // -------------- ACTIVATE PM CHATBOT
-  checkPmChatbot, // --------------- CHECK PM CHATBOT STATUS
-  deactivateChatBot, // ------------ DEACTIVATE PM CHATBOT
-  setBotMode, // ------------------- SET BOT MODE
-  getBotMode, // ------------------- GET BOT MODE
-  banGroup, // --------------------- BAN GROUP
-  checkBanGroup, //----------------- CHECK BAN STATUS OF A GROUP
-  unbanGroup, // ------------------- UNBAN GROUP
-} = require("../System/MongoDB/MongoDb_Core");
+import {   banUser, //----------------------- BAN   checkBan, // --------------------- CHECK BAN STATUS   unbanUser, // -------------------- UNBAN   addMod, // ----------------------- ADD MOD   checkMod, // --------------------- CHECK MOD STATUS   delMod, // ----------------------- DEL MOD   setChar, // ---------------------- SET CHAR ID   getChar, // ---------------------- GET CHAR ID   activateChatBot, // -------------- ACTIVATE PM CHATBOT   checkPmChatbot, // --------------- CHECK PM CHATBOT STATUS   deactivateChatBot, // ------------ DEACTIVATE PM CHATBOT   setBotMode, // ------------------- SET BOT MODE   getBotMode, // ------------------- GET BOT MODE   banGroup, // --------------------- BAN GROUP   checkBanGroup, //----------------- CHECK BAN STATUS OF A GROUP   unbanGroup, // ------------------- UNBAN GROUP } from "../System/MongoDB/MongoDb_Core.js";
 
-const { userData } = require("../System/MongoDB/MongoDB_Schema.js");
+import { userData } from "../System/MongoDB/MongoDB_Schema.js";
 
 let mergedCommands = [
   "addmod",
@@ -43,7 +26,7 @@ let mergedCommands = [
   "mode",
 ];
 
-module.exports = {
+export default {
   name: "moderators",
   alias: [...mergedCommands],
   uniquecommands: [

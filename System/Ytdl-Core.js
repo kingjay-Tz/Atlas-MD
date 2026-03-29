@@ -1,11 +1,11 @@
-const ytdl = require("youtubedl-core");
-const yts = require("youtube-yts");
-const readline = require("readline");
-const ffmpeg = require("fluent-ffmpeg");
-const NodeID3 = require("node-id3");
-const fs = require("fs");
-const { fetchBuffer } = require("./Function");
-const { randomBytes } = require("crypto");
+import ytdl from "youtubedl-core";
+import yts from "youtube-yts";
+import readline from "readline";
+import ffmpeg from "fluent-ffmpeg";
+import NodeID3 from "node-id3";
+import fs from "fs";
+import { fetchBuffer } from "./Function.js";
+import { randomBytes } from "crypto";
 const ytIdRegex =
   /(?:youtube\.com\/\S*(?:(?:\/e(?:mbed))?\/|watch\?(?:\S*?&?v\=))|youtu\.be\/)([a-zA-Z0-9_-]{6,11})/;
 
@@ -242,4 +242,4 @@ class YT {
   };
 }
 
-module.exports = YT;
+export default YT;

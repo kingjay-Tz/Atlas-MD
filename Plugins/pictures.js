@@ -1,6 +1,6 @@
-const gis = require("g-i-s");
-const axios = require("axios");
-const hxzapi = require("hxz-api");
+import gis from "g-i-s";
+import axios from "axios";
+import hxzapi from "hxz-api";
 let mergedCommands = [
   "gig",
   "gimage",
@@ -14,7 +14,7 @@ let mergedCommands = [
   "pinterest",
 ];
 
-module.exports = {
+export default {
   name: "pictures",
   alias: [...mergedCommands],
   uniquecommands:[

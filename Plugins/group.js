@@ -1,17 +1,7 @@
-const fs = require("fs");
-const Jimp = require("jimp");
-const moment = require("moment-timezone");
-const {
-  setWelcome, // ------------------- SET WELCOME MESSAGE
-  checkWelcome, // ----------------- CHECK WELCOME MESSAGE STATUS
-  delWelcome, // ------------------- DELETE WELCOME MESSAGE
-  setAntilink, // ------------------ SET ANTILINK
-  checkAntilink, // ---------------- CHECK ANTILINK STATUS
-  delAntilink, // ------------------ DELETE ANTILINK
-  setGroupChatbot, // -------------- SET GROUP CHATBOT
-  checkGroupChatbot, // ------------ CHECK GROUP CHATBOT STATUS
-  delGroupChatbot,
-} = require("../System/MongoDB/MongoDb_Core");
+import fs from "fs";
+import Jimp from "jimp";
+import moment from "moment-timezone";
+import {   setWelcome, // ------------------- SET WELCOME MESSAGE   checkWelcome, // ----------------- CHECK WELCOME MESSAGE STATUS   delWelcome, // ------------------- DELETE WELCOME MESSAGE   setAntilink, // ------------------ SET ANTILINK   checkAntilink, // ---------------- CHECK ANTILINK STATUS   delAntilink, // ------------------ DELETE ANTILINK   setGroupChatbot, // -------------- SET GROUP CHATBOT   checkGroupChatbot, // ------------ CHECK GROUP CHATBOT STATUS   delGroupChatbot, } from "../System/MongoDB/MongoDb_Core.js";
 let mergedCommands = [
   "admins",
   "admin",
@@ -41,7 +31,7 @@ let mergedCommands = [
   "welcome",
 ];
 
-module.exports = {
+export default {
   name: "groupanagement",
   alias: [...mergedCommands],
   uniquecommands: [

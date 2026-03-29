@@ -1,8 +1,8 @@
-const axios = require("axios");
-const yts = require("youtube-yts");
-const googleit = require("google-it");
-const { ringtone } = require("../System/Scrapers");
-const { Sticker, StickerTypes } = require("wa-sticker-formatter");
+import axios from "axios";
+import yts from "youtube-yts";
+import googleit from "google-it";
+import { ringtone } from "../System/Scrapers.js";
+import { Sticker, StickerTypes } from "wa-sticker-formatter";
 
 let mergedCommands = [
   "google",
@@ -18,7 +18,7 @@ let mergedCommands = [
   "gh",
 ];
 
-module.exports = {
+export default {
   name: "searches",
   alias: [...mergedCommands],
   uniquecommands: [

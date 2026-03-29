@@ -1,36 +1,32 @@
-require("./Configurations");
-const {
-  default: atlasConnect,
-  DisconnectReason,
-  fetchLatestBaileysVersion,
-  downloadContentFromMessage,
-  makeInMemoryStore,
-  jidDecode,
-} = require("baileysjs");
-const fs = require("fs");
-const figlet = require("figlet");
-const { join } = require("path");
-const got = require("got");
-const pino = require("pino");
-const path = require("path");
-const FileType = require("file-type");
-const { Boom } = require("@hapi/boom");
-const { serialize, WAConnection } = require("./System/whatsapp.js");
-const { smsg, getBuffer, getSizeMedia } = require("./System/Function2");
-const express = require("express");
+import "./Configurations.js";
+import atlasConnect, { DisconnectReason, fetchLatestBaileysVersion, downloadContentFromMessage, makeInMemoryStore, jidDecode } from "baileysjs";
+import fs from "fs";
+import figlet from "figlet";
+import { join } from "path";
+import got from "got";
+import pino from "pino";
+import path from "path";
+import FileType from "file-type";
+import { Boom } from "@hapi/boom";
+import { serialize, WAConnection } from "./System/whatsapp.js";
+import { smsg, getBuffer, getSizeMedia } from "./System/Function2.js";
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+import express from "express";
 const app = express();
 const PORT = global.port;
-const welcomeLeft = require("./System/Welcome.js");
-const { readcommands, commands } = require("./System/ReadCommands.js");
+import welcomeLeft from "./System/Welcome.js";
+import { readcommands, commands } from "./System/ReadCommands.js";
 commands.prefix = global.prefa;
-const mongoose = require("mongoose");
-const Auth = require("./System/MongoAuth/MongoAuth");
-const qrcode = require("qrcode");
-const {
-  getPluginURLs, // -------------------- GET ALL PLUGIN DATA FROM DATABASE
-} = require("./System/MongoDB/MongoDb_Core.js");
+import mongoose from "mongoose";
+import Auth from "./System/MongoAuth/MongoAuth.js";
+import qrcode from "qrcode";
+import { getPluginURLs } from "./System/MongoDB/MongoDb_Core.js";
 
-const chalk = require("chalk");
+import chalk from "chalk";
 const store = makeInMemoryStore({
   logger: pino().child({
     level: "silent",
@@ -193,7 +189,8 @@ const startAtlas = async () => {
     if (m.key && m.key.remoteJid == "status@broadcast") return;
     if (m.key.id.startsWith("BAE5") && m.key.id.length == 16) return;
 
-    require("./Core.js")(Atlas, m, commands, chatUpdate);
+    const { default: core } = await import("./Core.js");
+    core(Atlas, m, commands, chatUpdate);
   });
 
   Atlas.getName = (jid, withoutContact = false) => {
@@ -367,7 +364,7 @@ const startAtlas = async () => {
       pathFile = filename;
     if (options.asDocument) type = "document";
     if (options.asSticker || /webp/.test(mime)) {
-      let { writeExif } = require("./lib/sticker.js");
+      const { writeExif } = await import("./lib/sticker.js");
       let media = {
         mimetype: mime,
         data,

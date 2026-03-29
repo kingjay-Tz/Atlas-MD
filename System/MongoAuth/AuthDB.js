@@ -1,6 +1,6 @@
-const { sessionSchema } = require("./Schema");
+import { sessionSchema } from "./Schema/index.js";
 
-module.exports = class Database {
+export default class Database {
   constructor() {}
   /**
    * @param {string} sessionId

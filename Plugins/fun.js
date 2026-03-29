@@ -1,4 +1,4 @@
-const axios = require("axios");
+import axios from "axios";
 
 let mergedCommands = [
   "truth",
@@ -20,7 +20,7 @@ let mergedCommands = [
   "uglycheck",
 ];
 
-module.exports = {
+export default {
   name: "fun",
   alias: [...mergedCommands],
   uniquecommands: [

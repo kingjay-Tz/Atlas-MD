@@ -712,7 +712,7 @@ async function unbanGroup(groupID) {
 
 
 // Exporting the functions
-module.exports = {
+export default {
   banUser, //----------------------- BAN
   checkBan, // --------------------- CHECK BAN STATUS
   unbanUser, // -------------------- UNBAN

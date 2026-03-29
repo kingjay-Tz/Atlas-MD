@@ -6,7 +6,7 @@ let mergedCommands = [
   "tiktokdoc",
 ];
 
-module.exports = {
+export default {
   name: "tiktokDl",
   alias: [...mergedCommands],
   uniquecommands: ["tiktok", "tiktokmp3", "tiktokmp4", "tiktokdoc"],
@@ -77,7 +77,7 @@ module.exports = {
       case "tiktokmp3":
         await doReact("📥");
 
-        require("../System/Tiktokscraper")
+        import "../System/Tiktokscraper.js";
           .Tiktok(args[0])
           .then((data) => {
             Atlas.sendMessage(
@@ -92,7 +92,7 @@ module.exports = {
       case "tiktokmp4":
         await doReact("📥");
 
-        require("../System/Tiktokscraper")
+        import "../System/Tiktokscraper.js";
           .Tiktok(args[0])
           .then((data) => {
             Atlas.sendMessage(
@@ -110,7 +110,7 @@ module.exports = {
       case "tiktokdoc":
         await doReact("📥");
 
-        require("../System/Tiktokscraper")
+        import "../System/Tiktokscraper.js";
           .Tiktok(args[0])
           .then((data) => {
             Atlas.sendMessage(

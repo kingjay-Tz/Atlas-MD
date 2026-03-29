@@ -1,13 +1,13 @@
-const { getRandom } = require("../System/Function");
-const { webp2mp4File } = require("../System/Uploader");
-const { toAudio } = require("../System/File-Converter");
-const { exec } = require("child_process");
-const fs = require("fs");
-const PDFDocument = require("pdfkit");
-let { GraphOrg } = require("../System/Uploader");
-const { getBuffer } = require("../System/Function2.js");
+import { getRandom } from "../System/Function.js";
+import { webp2mp4File } from "../System/Uploader.js";
+import { toAudio } from "../System/File-Converter.js";
+import { exec } from "child_process";
+import fs from "fs";
+import PDFDocument from "pdfkit";
+import { GraphOrg } from "../System/Uploader.js";
+import { getBuffer } from "../System/Function2.js";
 
-const util = require("util");
+import util from "util";
 let mergedCommands = [
   "toimg",
   "toimage",
@@ -21,7 +21,7 @@ let mergedCommands = [
   "toqr",
 ];
 
-module.exports = {
+export default {
   name: "converters",
   alias: [...mergedCommands],
   uniquecommands: [

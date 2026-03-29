@@ -1,6 +1,6 @@
-const fs = require('fs')
-const path = require('path')
-const { spawn } = require('child_process')
+import fs from 'fs';
+import path from 'path';
+import { spawn } from 'child_process';
 
 function ffmpeg(buffer, args = [], ext = '', ext2 = '') {
   return new Promise(async (resolve, reject) => {
@@ -77,7 +77,7 @@ function toVideo(buffer, ext) {
   ], ext, 'mp4')
 }
 
-module.exports = {
+export default {
   toAudio,
   toPTT,
   toVideo,

@@ -1,6 +1,6 @@
-const {checkWelcome}= require('./MongoDB/MongoDb_Core');
+import {checkWelcome} from './MongoDB/MongoDb_Core.js';
 
-module.exports = async (Atlas, anu) => {
+export default async (Atlas, anu) => {
   try {
     let metadata = await Atlas.groupMetadata(anu.id);
     let participants = anu.participants;

@@ -1,5 +1,5 @@
-const fs = require("fs");
-const Collections = require("./Collections");
+import fs from "fs";
+import Collections from "./Collections.js";
 const commands = new Collections();
 commands.prefix = global.prefa;
 
@@ -8,9 +8,10 @@ commands.prefix = global.prefa;
       .readdirSync("./Plugins")
       .filter((file) => file.endsWith(".js"));
     for (const file of cmdfile) {
-      const cmdfiles = require(`../Plugins/${file}`);
+      const module = await import(`../Plugins/${file}`);
+      const cmdfiles = module.default;
       commands.set(cmdfiles.name, cmdfiles);
     }
   };
 
-  module.exports = {readcommands, commands};
+  export {readcommands, commands};

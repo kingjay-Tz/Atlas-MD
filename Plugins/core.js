@@ -1,7 +1,7 @@
-const fs = require("fs");
-const axios = require("axios");
-const path = require("path");
-const package = require("../package.json");
+import fs from "fs";
+import axios from "axios";
+import path from "path";
+import package from "../package.json";
 let mergedCommands = [
   "help",
   "h",
@@ -12,7 +12,7 @@ let mergedCommands = [
   "script",
 ];
 
-module.exports = {
+export default {
   name: "systemcommands",
   alias: [...mergedCommands],
   uniquecommands: ["script", "support", "help"],

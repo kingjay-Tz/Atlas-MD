@@ -1,7 +1,8 @@
-const { initAuthCreds, BufferJSON, proto } = require("baileysjs");
-const Database = require("./AuthDB");
+import baileysjs from "baileysjs";
+const { initAuthCreds, BufferJSON, proto } = baileysjs;
+import Database from "./AuthDB.js";
 
-module.exports = class Authenication {
+export default class Authenication {
   /**
    * @param {string} sessionId
    */

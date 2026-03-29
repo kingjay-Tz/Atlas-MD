@@ -42,4 +42,4 @@ class Collections extends Map {
 		return this.get(name);
 	}
 }
-module.exports = Collections
+export default Collections

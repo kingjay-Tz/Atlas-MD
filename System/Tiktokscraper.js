@@ -1,5 +1,5 @@
-const axios = require("axios");
-const cheerio = require("cheerio");
+import axios from "axios";
+import cheerio from "cheerio";
 
 const clean = (data) => {
   let regex = /(<([^>]+)>)/gi;
@@ -11,7 +11,7 @@ async function shortener(url) {
   return url;
 }
 
-exports.Tiktok = async(query) => {
+export const Tiktok = async(query) => {
   let response = await axios("https://lovetik.com/api/ajax/search", {
     method: "POST",
     data: new URLSearchParams(Object.entries({ query })),

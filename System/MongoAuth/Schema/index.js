@@ -1,3 +1,1 @@
-module.exports = {
-    sessionSchema: require("./SessionSchema"),
-  };
+export { default as sessionSchema } from "./SessionSchema.js";

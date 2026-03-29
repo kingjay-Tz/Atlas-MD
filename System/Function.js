@@ -1,13 +1,13 @@
-const axios = require("axios");
-const cheerio = require("cheerio");
-let BodyForm = require("form-data");
-let fs = require("fs");
+import axios from "axios";
+import cheerio from "cheerio";
+import BodyForm from "form-data";
+import fs from "fs";
 
-exports.sleep = async (ms) => {
+export const sleep = async (ms) => {
   return new Promise((resolve) => setTimeout(resolve, ms));
 };
 
-exports.fetchBuffer = async (url, options) => {
+export const fetchBuffer = async (url, options) => {
   try {
     options ? options : {};
     const res = await axios({
@@ -27,7 +27,7 @@ exports.fetchBuffer = async (url, options) => {
     return err;
   }
 };
-exports.webp2mp4File = async (path) => {
+export const webp2mp4File = async (path) => {
   return new Promise((resolve, reject) => {
     const form = new BodyForm();
     form.append("new-image-url", "");
@@ -71,7 +71,7 @@ exports.webp2mp4File = async (path) => {
   });
 };
 
-exports.fetchUrl = async (url, options) => {
+export const fetchUrl = async (url, options) => {
   try {
     options ? options : {};
     const res = await axios({
@@ -89,7 +89,7 @@ exports.fetchUrl = async (url, options) => {
   }
 };
 
-exports.WAVersion = async () => {
+export const WAVersion = async () => {
   let get = await exports.fetchUrl(
     "https://web.whatsapp.com/check-update?version=1&platform=web"
   );
@@ -97,11 +97,11 @@ exports.WAVersion = async () => {
   return version;
 };
 
-exports.getRandom = (ext) => {
+export const getRandom = (ext) => {
   return `${Math.floor(Math.random() * 10000)}${ext}`;
 };
 
-exports.isUrl = (url) => {
+export const isUrl = (url) => {
   return url.match(
     new RegExp(
       /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/,
@@ -110,7 +110,7 @@ exports.isUrl = (url) => {
   );
 };
 
-exports.isNumber = (number) => {
+export const isNumber = (number) => {
   const int = parseInt(number);
   return typeof int === "number" && !isNaN(int);
 };

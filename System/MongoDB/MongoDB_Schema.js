@@ -1,5 +1,5 @@
-const mongoose = require("mongoose");
-const config = require("../../Configurations.js");
+import mongoose from "mongoose";
+import config from "../../Configurations.js";
 const options = {
   socketTimeoutMS: 30000,
 };
@@ -44,4 +44,4 @@ const groupData = db1.model("GroupData", GroupSchema);
 const systemData = db2.model("SystemData", CoreSchema);
 const pluginData = db2.model("PluginData", PluginSchema);
 
-module.exports = { userData, groupData, systemData, pluginData };
+export { userData, groupData, systemData, pluginData };

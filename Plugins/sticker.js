@@ -1,13 +1,9 @@
-const fs = require("fs");
-const fetch = require("node-fetch");
-const axios = require("axios");
-const { Sticker, StickerTypes } = require("wa-sticker-formatter");
-let { TelegraPh } = require("../System/Uploader.js");
-const {
-  fetchJson,
-  getBuffer,
-  GIFBufferToVideoBuffer,
-} = require("../System/Function2.js");
+import fs from "fs";
+import fetch from "node-fetch";
+import axios from "axios";
+import { Sticker, StickerTypes } from "wa-sticker-formatter";
+import { TelegraPh } from "../System/Uploader.js";
+import {   fetchJson,   getBuffer,   GIFBufferToVideoBuffer, } from "../System/Function2.js";
 let mergedCommands = [
   "sticker",
   "s",
@@ -22,7 +18,7 @@ let mergedCommands = [
   "emojimix",
 ];
 
-module.exports = {
+export default {
   name: "stickerformat",
   alias: [...mergedCommands],
   uniquecommands: [

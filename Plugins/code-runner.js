@@ -1,12 +1,12 @@
-const fs = require("fs");
-const url = require("url");
-const { checkMod } = require("../System/MongoDB/MongoDb_Core");
-const https = require("https");
-const pm2 = require("pm2");
-const { fork } = require("child_process");
+import fs from "fs";
+import url from "url";
+import { checkMod } from "../System/MongoDB/MongoDb_Core.js";
+import https from "https";
+import pm2 from "pm2";
+import { fork } from "child_process";
 let mergedCommands = ["exec", "run", "html", "gethtml"];
 
-module.exports = {
+export default {
   name: "coderunner",
   alias: [...mergedCommands],
   uniquecommands: ["exec", "run", "html", "gethtml"],

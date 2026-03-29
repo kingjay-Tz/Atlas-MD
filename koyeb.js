@@ -1,4 +1,4 @@
-const forever = require("forever-monitor");
+import forever from "forever-monitor";
 const boot = new forever.Monitor("index.js", {
   silent: false,
 });

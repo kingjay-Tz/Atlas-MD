@@ -1,4 +1,4 @@
-const axios = require("axios");
+import axios from "axios";
 let mergedCommands = [
   "igdl",
   "instadl",
@@ -8,7 +8,7 @@ let mergedCommands = [
   "mediafire",
 ];
 
-module.exports = {
+export default {
   name: "downloader",
   alias: [...mergedCommands],
   uniquecommands: ["igdl", "fbdl", "mediafiredl"],

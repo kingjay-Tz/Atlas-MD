@@ -1,4 +1,4 @@
-const chalk = require('chalk')
+import chalk from 'chalk';
 
 const color = (text, color) => {
     return !color ? chalk.green(text) : chalk.keyword(color)(text)
@@ -12,7 +12,7 @@ const XinzLog = (text, color) => {
 	return !color ? chalk.yellow('[FAX] ') + chalk.green(text) : chalk.yellow('[XINZ] ') + chalk.keyword(color)(text)
 }
 
-module.exports = {
+export default {
 	color,
 	bgcolor,
 	XinzLog

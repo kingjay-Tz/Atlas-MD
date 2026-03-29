@@ -1,9 +1,9 @@
-let axios = require('axios')
-let BodyForm = require('form-data')
-let { fromBuffer } = require('file-type')
-let fetch = require('node-fetch')
-let fs = require('fs')
-let cheerio = require('cheerio')
+import axios from 'axios';
+import BodyForm from 'form-data';
+import { fromBuffer } from 'file-type';
+import fetch from 'node-fetch';
+import fs from 'fs';
+import cheerio from 'cheerio';
 
 
 
@@ -84,4 +84,4 @@ function webp2mp4File(path) {
 	})
 }
 
-module.exports = { GraphOrg, UploadFileUgu, webp2mp4File }
+export default { GraphOrg, UploadFileUgu, webp2mp4File }

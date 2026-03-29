@@ -1,8 +1,8 @@
-const YT = require("../System/Ytdl-Core.js");
-const fs = require("fs");
-const yts = require("youtube-yts");
-const ffmpeg = require("fluent-ffmpeg");
-const { getBuffer } = require("../System/Function2.js");
+import YT from "../System/Ytdl-Core.js";
+import fs from "fs";
+import yts from "youtube-yts";
+import ffmpeg from "fluent-ffmpeg";
+import { getBuffer } from "../System/Function2.js";
 
 let mergedCommands = [
   "play",
@@ -18,7 +18,7 @@ let mergedCommands = [
   "video",
 ];
 
-module.exports = {
+export default {
   name: "mediaDownloader",
   alias: [...mergedCommands],
   uniquecommands: ["song", "video", "ytmp3", "ytmp4"],

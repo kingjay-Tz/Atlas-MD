@@ -1,8 +1,8 @@
-const axios = require("axios");
-const { getBuffer } = require("../System/Function2.js");
+import axios from "axios";
+import { getBuffer } from "../System/Function2.js";
 let mergedCommands = ["toqr"];
 
-module.exports = {
+export default {
   name: "otherscommands",
   alias: [...mergedCommands],
   uniquecommands: ["toqr"],

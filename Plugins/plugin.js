@@ -1,17 +1,11 @@
-const got = require("got");
-const fs = require("fs");
-const path = require("path");
-const { readcommands } = require("../System/ReadCommands.js");
-const {
-  pushPlugin, // -------------------- PUSH NEW INSTALLED PLUGIN IN DATABASE
-  isPluginPresent, // --------------- CHECK IF PLUGIN IS ALREADY PRESENT IN DATABASE
-  delPlugin, // --------------------- DELETE A PLUGIN FROM THE DATABASE
-  getAllPlugins, // ----------------- GET ALL PLUGINS FROM DATABASE
-  checkMod, // ---------------------- CHECK IF SENDER IS MOD
-} = require("../System/MongoDB/MongoDb_Core.js");
+import got from "got";
+import fs from "fs";
+import path from "path";
+import { readcommands } from "../System/ReadCommands.js";
+import {   pushPlugin, // -------------------- PUSH NEW INSTALLED PLUGIN IN DATABASE   isPluginPresent, // --------------- CHECK IF PLUGIN IS ALREADY PRESENT IN DATABASE   delPlugin, // --------------------- DELETE A PLUGIN FROM THE DATABASE   getAllPlugins, // ----------------- GET ALL PLUGINS FROM DATABASE   checkMod, // ---------------------- CHECK IF SENDER IS MOD } from "../System/MongoDB/MongoDb_Core.js";
 
 let mergedCommands = ["install", "uninstall", "plugins", "pluginlist"];
-module.exports = {
+export default {
   name: "plugininstaller",
   alias: [...mergedCommands],
   uniquecommands: ["install", "uninstall", "plugins", "pluginlist"],

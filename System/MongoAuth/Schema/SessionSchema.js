@@ -1,4 +1,4 @@
-const { model, Schema } = require("mongoose");
+import { model, Schema } from "mongoose";
 
 const schema = new Schema({
   sessionId: {
@@ -10,4 +10,4 @@ const schema = new Schema({
   session: String,
 });
 
-module.exports = model("sessionschemas", schema);
+export default model("sessionschemas", schema);

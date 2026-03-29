@@ -1,10 +1,5 @@
-const {
-  userData,
-  groupData,
-  systemData,
-  pluginData,
-} = require("../MongoDB/MongoDB_Schema.js");
-const mongoose = require("mongoose");
+import {   userData,   groupData,   systemData,   pluginData, } from "../MongoDB/MongoDB_Schema.js";
+import mongoose from "mongoose";
 // BAN USER
 async function banUser(userId) {
   const user = await userData.findOne({ id: userId });
@@ -371,7 +366,7 @@ async function getAllPlugins() {
 
 
 // Exporting the functions
-module.exports = {
+export {
   banUser, //----------------------- BAN
   checkBan, // --------------------- CHECK BAN STATUS
   unbanUser, // -------------------- UNBAN
