@@ -2,3 +2,6 @@ node_modules
 yarn.lock
 .env
 Test
+quickdb.json
+System/Cache/*
+!System/Cache/.gitkeep
