@@ -292,15 +292,16 @@ export default async (Atlas, m, commands, chatUpdate) => {
     }
 
     const idConfig = "charID" + CharacterSelection;
+    const charConfig = global[idConfig] || global["charID0"];
 
-    global.botName = global[idConfig].botName;
-    global.botVideo = global[idConfig].botVideo;
-    global.botImage1 = global[idConfig].botImage1;
-    global.botImage2 = global[idConfig].botImage2;
-    global.botImage3 = global[idConfig].botImage3;
-    global.botImage4 = global[idConfig].botImage4;
-    global.botImage5 = global[idConfig].botImage5;
-    global.botImage6 = global[idConfig].botImage6;
+    global.botName = charConfig.botName;
+    global.botVideo = charConfig.botVideo;
+    global.botImage1 = charConfig.botImage1;
+    global.botImage2 = charConfig.botImage2;
+    global.botImage3 = charConfig.botImage3;
+    global.botImage4 = charConfig.botImage4;
+    global.botImage5 = charConfig.botImage5;
+    global.botImage6 = charConfig.botImage6;
 
     // ------------------------------------------------------------------------------------------------------- //
 

@@ -370,7 +370,7 @@ export default {
         }
 
         const intinput = parseInt(text);
-        if (intinput < 0 || intinput > 19) {
+        if (isNaN(intinput) || intinput < 0 || intinput > 19) {
           await doReact("❌");
           return Atlas.sendMessage(
             m.from,
