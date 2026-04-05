@@ -1,666 +1,440 @@
 <p align="center">
-<a href="https://github.com/FantoX/Atlas-MD">
-    <img src="https://i.imgur.com/MClOeqe.jpeg">
+  <a href="https://github.com/FantoX/Atlas-MD">
+    <img src="https://i.imgur.com/MClOeqe.jpeg" width="100%">
   </a>
+</p>
 
-<h1 align="center"> Atlas MD
-</h1>
+<h1 align="center">⚡ Atlas MD</h1>
 
-<p align="center"> 
-Konnichiwa Senpai, I am "Atlas" an Opensource WhatsApp bot made by <a href="https://github.com/FantoX">FantoX</a> and his team "Atlas" to do everything that's beyond imagination with highest <b>Features</b> and <b>Stability</b> and <b>Compatibility</b> built with Baileys Multi Device support.
-
-<h3 align="center"> Atlas MD - The Future Is Here
-</h4>
-
-<br>
+<p align="center">
+  <i>An Opensource WhatsApp bot by <a href="https://github.com/FantoX">FantoX</a> & Team Atlas — built with Baileys Multi-Device for maximum features, stability and compatibility.</i>
+</p>
 
 <p align="center">
   <a href="https://github.com/FantoX/Atlas-MD/fork">
     <img src="https://img.shields.io/github/forks/FantoX/Atlas-MD?label=Fork&style=social">
-    
-    
+  </a>
+  &nbsp;
   <a href="https://github.com/FantoX/Atlas-MD/stargazers">
     <img src="https://img.shields.io/github/stars/FantoX/Atlas-MD?style=social">
   </a>
-<p align="center">
-<a href="https://github.com/FantoX/Atlas-MD"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FFantoX%2FAtlas-MD&count_bg=%23FFA305&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=People+Visited&edge_flat=false)](https://hits.seeyoufarm.com" width="150px" /></a>
 </p>
 
-
-  
 <p align="center">
-<a href="https://github.com/FantoX"><img title="Owner" src="https://img.shields.io/badge/Owner-Team Atlas-white.svg?style=for-the-badge&logo=github" width="170px"></a>
-
- <a href="https://github.com/FantoX/Atlas-MD/blob/main/LICENSE.md">
-  
-<img src='https://img.shields.io/github/license/FantoX/Atlas-MD?color=%231e81b0&style=for-the-badge' width="114px">
-
-<p align="center">
-<a href="https://github.com/FantoX"><img title="Open Source" src="https://img.shields.io/badge/Open%20Source-YES-green.svg?style=for-the-badge" width="150px"></a>
-<a href="https://github.com/FantoX"><img title="" src="https://img.shields.io/badge/Maintained-YES-green.svg?style=for-the-badge" width="143px"></a>
+  <a href="https://github.com/FantoX/Atlas-MD"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FFantoX%2FAtlas-MD&count_bg=%23FFA305&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=People+Visited&edge_flat=false)](https://hits.seeyoufarm.com" width="150px"/></a>
 </p>
-<br>
+
+<p align="center">
+  <a href="https://github.com/FantoX">
+    <img src="https://img.shields.io/badge/Owner-Team Atlas-white.svg?style=for-the-badge&logo=github" width="170px">
+  </a>
+  <a href="https://github.com/FantoX/Atlas-MD/blob/main/LICENSE.md">
+    <img src="https://img.shields.io/github/license/FantoX/Atlas-MD?color=%231e81b0&style=for-the-badge" width="114px">
+  </a>
+  <a href="https://github.com/FantoX">
+    <img src="https://img.shields.io/badge/Open%20Source-YES-green.svg?style=for-the-badge" width="150px">
+  </a>
+  <a href="https://github.com/FantoX">
+    <img src="https://img.shields.io/badge/Maintained-YES-green.svg?style=for-the-badge" width="143px">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://cutt.ly/AtlasSupportStrict">
+    <img src="https://img.shields.io/badge/Join%20Support%20Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" width="200px">
+  </a>
+</p>
 
 ---
- <br>
- 
- # 🧩 Deploy Atlas
-     
-<details close>
-<summary>Click to choose your favourite platform to Deploy</summary>
- 
-<br><br>   
-    
-<h4 align="center"> Deploy on Repl.it
-</h4>
 
-<p align="center" >
-    <a href="https://repl.it/github/FantoX/Atlas-MD">
-    <img src="https://i.ibb.co/zrB5kMh/deploy-on-repl.jpg" width="170px" alt="Deploy on Heroku" >
-    </a>
-    <br>     
-    <a href="https://youtu.be/R-_DU73UH8Q"><img src="https://i.ibb.co/71mYRh4/116-1161192-podcast-subscribe-listen-button-youtube-sign-hd-png.png" alt="Watch tutorial on YouTube" border="0"  width="105">
-    </a>
-</p>
+## 🎀 Key Features at a Glance
 
-<p align="center" >
-    <br>
-    __________________________
-    <br>
-</p>   
-      
-      
-      
-<h4 align="center"> Deploy on Railway 
-</h4>
-  
+| Feature | Details |
+|---------|---------|
+| 🤖 **Triple AI** | ChatGPT · Claude · Gemini — with multi-key pool for rate-limit distribution |
+| 💬 **Chatbot** | Group chatbot (replies to @mentions) + DM chatbot (toggleable) |
+| 📥 **Universal Downloader** | TikTok · Instagram · Pinterest · Facebook · Twitter/X · Threads · Videy · Mega · SoundCloud · Spotify · YouTube · Sfile · MediaFire |
+| 🎭 **26 Anime Reactions** | bite, bonk, hug, kiss, slap, pat, cry... all as animated GIFs |
+| 🎨 **20 Bot Characters** | Switch personality: Atlas, Power, Makima, Zero Two, Miku, Rem & 14 more |
+| 🛡️ **Full Moderation** | Silent ban (user & group), role hierarchy, bot mode (Self/Private/Public) |
+| 👥 **Group Management** | Promote, demote, tagall, antilink, welcome/goodbye, info, link & more |
+| 🔖 **Sticker Toolkit** | Make stickers from image/video, meme stickers, quote stickers, emoji mixer |
+| 🔄 **Media Converters** | Sticker↔Image/GIF/MP4, Video→MP3, Image→PDF, Media→URL, URL→QR |
+| 🔍 **Search Engine** | Google, Wikipedia, YouTube, Lyrics, Weather, GitHub, Wallpapers, Ringtones |
+| 🧩 **Live Plugin Store** | Install/uninstall plugins from URL — no restart needed |
+| ☁️ **MongoDB Powered** | All settings persist: bans, mods, modes, chatbot, welcome, characters |
+| 🔧 **FFmpeg Bundled** | No manual FFmpeg install needed — shipped via `ffmpeg-static` |
+| 🆔 **Baileys v7 Ready** | Full LID resolution — owner detection & chatbot @mentions work correctly |
+
+---
+
+## 🚀 One-Click Deploy
+
 <p align="center">
-    <a href="https://railway.app/new/template/Gts2Zx?referralCode=f3gg2m">
-    <img src="https://railway.app/button.svg" alt="Deploy on Railway" width="170px">
-    </a>
-    <br>
-    <a href="https://youtu.be/Qs6ryWnEtu8"><img src="https://i.ibb.co/71mYRh4/116-1161192-podcast-subscribe-listen-button-youtube-sign-hd-png.png" alt="Watch tutorial on YouTube" border="0"  width="105">
-    </a>
-</p>
 
-<p align="center" >
-    <br>
-    __________________________
-    <br>
-</p>
-
-<br>
-      
-<h4 align="center"> Deploy on Koyeb
-</h4>
-      
-<p align="center">
-    <a href="https://app.koyeb.com/apps/deploy?type=docker&image=quay.io/FantoX/Atlas-MD:main&env[PORT]=8000&env[PREFIX]=-&&env[MONGODB]=mongodb+srv://fantox001:zjmbvgwr52@cluster0.qh05pl9.mongodb.net/?retryWrites=true&w=majority&&env[SESSION_ID]=enterYourSession&&env[MODS]=918101187835,919735940276&&env[TENOR_API_KEY]=AIzaSyCyouca1_KKy4W_MG1xsPzuku5oa8W358c&&env[PACKNAME]=Miku-Nakano&&env[AUTHOR]=FantoX&&name=atlas">
-    <img src="https://www.koyeb.com/static/images/deploy/button.svg" alt="Deploy on Koyeb" width="155px">
-    </a>
-   <br>     
-    <a href="https://youtu.be/OvNnpK1Gx6Y"><img src="https://i.ibb.co/71mYRh4/116-1161192-podcast-subscribe-listen-button-youtube-sign-hd-png.png" alt="Watch tutorial on YouTube" border="0"  width="105">
-    </a>
-</p>
-
-
-<p align="center" >
-    <br>
-    __________________________
-    <br>
-</p>
-
-
-<br>
- 
-<h4 align="center"> Deploy on Heroku
-</h4>
+| Platform | Deploy | Tutorial |
+|----------|--------|----------|
+| **Repl.it** | [![Deploy on Repl.it](https://i.ibb.co/zrB5kMh/deploy-on-repl.jpg)](https://repl.it/github/FantoX/Atlas-MD) | [▶ Watch](https://youtu.be/R-_DU73UH8Q) |
+| **Railway** | [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/Gts2Zx?referralCode=f3gg2m) | [▶ Watch](https://youtu.be/Qs6ryWnEtu8) |
+| **Koyeb** | [![Deploy on Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/apps/deploy?type=docker&image=quay.io/FantoX/Atlas-MD:main&env[PORT]=8000&env[PREFIX]=-&&env[MONGODB]=mongodb+srv://...&&env[SESSION_ID]=yourSession&&env[MODS]=918101187835&&env[TENOR_API_KEY]=AIzaSyCyouca1_KKy4W_MG1xsPzuku5oa8W358c&&name=atlas) | [▶ Watch](https://youtu.be/OvNnpK1Gx6Y) |
+| **Heroku** | [![Deploy on Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/FantoX/Atlas-MD) | — |
+| **Mogenius** | [![Mogenius](https://www.cloudflare.com/static/90073b1e5bd8a0765640a20febb3dc22/mogenius_logo_quer.png)](https://studio.mogenius.com/) | — |
+| **BoxMineWorld** | [![BoxMineWorld](https://graph.org/file/2af0e67f320986702ea24.jpg)](https://dash.boxmineworld.com/) | — |
 
 </p>
 
-<p align="center" >
-    <a href="https://heroku.com/deploy?template=https://github.com/FantoX/Atlas-MD">
-    <img src="https://www.herokucdn.com/deploy/button.png" width="160px" alt="Deploy on Heroku" >
-    </a>
+---
 
-</p>
+## ⚙️ Environment Variables
 
-<p align="center" >
-    <br>
-    __________________________
-    <br>
-</p>
+> Set these in `.env` (local) or as Environment Variables on your hosting platform.  
+> Multiple API keys can be comma-separated — the bot picks one randomly per request.
 
+| Variable | Description | Required |
+|----------|-------------|----------|
+| `PREFIX` | Command prefix (e.g. `-`, `.`, `!`) | ✅ |
+| `MODS` | Owner phone numbers without `+` or spaces, comma-separated (e.g. `918101187876,9198XXXXXXXX`) | ✅ |
+| `MONGODB` | Your MongoDB connection URL | ✅ |
+| `SESSION_ID` | Any random string — acts as the bot session key | ✅ |
+| `TENOR_API_KEY` | Tenor API key(s) for GIF commands, comma-separated | ✅ for GIFs |
+| `GEMINI_API` | Google Gemini API key(s), comma-separated | Optional |
+| `OPENAI_API` | OpenAI API key(s) starting with `sk-`, comma-separated | Optional |
+| `CLAUDE_API` | Anthropic Claude API key(s), comma-separated | Optional |
+| `PACKNAME` | Sticker pack name (default: `Atlas Bot`) | Optional |
+| `AUTHOR` | Sticker author name (default: `by: Team Atlas`) | Optional |
+| `PORT` | Server port (default: `10000`) | Optional |
+| `GC_INTERVAL_MINUTES` | MongoDB garbage collection interval in minutes (default: `5`) | Optional |
 
-<br>
+---
 
+## 📦 Local Installation
 
-<h4 align="center"> Deploy on Mogenius
-</h4>
-  
-<p align="center">
-    <a href="https://studio.mogenius.com/">
-    <img src="https://www.cloudflare.com/static/90073b1e5bd8a0765640a20febb3dc22/mogenius_logo_quer.png" alt="Deploy on Mogenius" width="170px">
-    </a>
-    
-</p>
+**Requirements:** [Node.js](https://nodejs.org/en/download/) · [Git](https://github.com/git-guides/install-git) · libwebp *(Linux only)*
 
-<p align="center" >
-    <br>
-    __________________________
-    <br>
-</p>
+> FFmpeg is **bundled automatically** via `ffmpeg-static` — no manual install needed!
 
-<br>
+```bash
+# 1. Clone and enter the directory
+git clone https://github.com/FantoX/Atlas-MD
+cd Atlas-MD
 
-<h4 align="center"> Deploy on Uffizzi
-</h4>
-  
-<p align="center">
-    <a href="https://www.uffizzi.com/">
-    <img src="https://i.ibb.co/Y29Kv4X/Screenshot-195.png" alt="Deploy on Uffizzi" width="125px">
-    </a>
-    
-</p>
+# 2. Install dependencies
+npm install
 
-<p align="center" >
-    <br>
-    __________________________
-    <br>
-</p>
+# 3. Copy and fill in your config
+cp .env.example .env
+# → Edit .env with your values
 
-
-<br>
-
-<h4 align="center"> Deploy on BoxMineWorld
-</h4>
-  
-<p align="center">
-    <a href="https://dash.boxmineworld.com/">
-    <img src="https://graph.org/file/2af0e67f320986702ea24.jpg" alt="Deploy on Boxmineworld" width="175px">
-    </a>
-    
-</p>
-
-<p align="center" >
-    <br>
-    __________________________
-    <br>
-</p>
-
-
-
-</details>
-
-<br>
-
-
-    
-    
-# 📑 Atlas Deploy and Hosting guide
-
-<details close>
-<summary>Click to read Deploy Manual</summary>    
-    
-## 🔶 Repl.it Deploy:
-      
-- [Fork Main Repo](https://github.com/FantoX/Atlas-MD/fork)
-- Create a MongoDB URL. Need help? Watch this short 1 minute [Video Guide](https://youtube.com/shorts/pIHvoXkwmq4?feature=share) for MongoDB URL.
-- Click on `Deploy to Repl.it` button ( `For those who didn't modified bot.`). In other case (`For those who modified bot.`) edit README.md file and chage the repo link of Repl.it deply button from `https://github.com/Fantox01/Atlas-MD` to your fork URL `https://github.com/<Your GitHub Username>/<Your Atlas fork repo name>`.
-- After cloning is done in Repl.it go to `Secrets` in your Repl.it project and put these values (Mandatory).
-  
-<br>
-      
-KEY | VALUE
--- | --
-MODS | Phone numbers in this format (`918101187876`,`925897863489`) without `+` or `SPACE`.
-MONGODB | Your MongoDB URL
-SESSION_ID | Any random value (`EX: gwfdrte5678`) and `keep it copied`.
-PREFIX | Any single special character except `@` (`Ex: . or / or * or , etc.`)
-TENOR_API_KEY | Your tenor API key if you have. Or use this public one: `AIzaSyCyouca1_KKy4W_MG1xsPzuku5oa8W358c`
-  
-<br>
-      
-- Next click on `Green Play button` in Repl.it to start bot installation.
-- After it's deployed an webpage should appear just put your Previously copied `Session ID` and click on `Get QR`.
-- Scan the QR from WhatsApp ---> Linked devices ---> Link a device.
-- After connecting come back to Repl.it and copy that Website (Webview) link from Repl.it.
-- Next create a [UptimeRobot](https://uptimerobot.com/?rid=40f9e46fb079d4) account and add that copied lin kas an `HTTPS` monitor in UptimeRobot.
-- UptimeRobot will prevent Repl.it's auto sleep.
-- If you are having issues follow [Repl.it Deploy Tutorial](https://youtu.be/R-_DU73UH8Q).
-      
-<br><br>
-      
-      
-      
-## ⚛️ Heroku Deploy:
-      
-- [Fork Main Repo](https://github.com/FantoX/Atlas-MD/fork)
-- Create a MongoDB URL. Need help? Watch this short 1 minute [Video Guide](https://youtube.com/shorts/pIHvoXkwmq4?feature=share) for MongoDB URL.
-- Click on `Deploy to Heroku` button ( `For those who didn't modified bot.`). In other case (`For those who modified bot.`) edit README.md file and chage the repo link of Repl.it deply button from `https://github.com/Fantox01/Atlas-MD` to your fork URL `https://github.com/<Your GitHub Username>/<Your Atlas fork repo name>` also got to `app.json` and change `Website` ans `Repository` link from my link to your link. Then click on `Deploy to Heroku` button.
-- Then put these values in environment variables accordint to instructions (Mandatory).
-  
-<br>
-      
-KEY | VALUE
--- | --
-MODS | Phone numbers in this format (`918101187876`,`925897863489`) without `+` or `SPACE`.
-MONGODB | Your MongoDB URL
-SESSION_ID | Any random value (`EX: gwfdrte5678`) and `keep it copied`.
-PREFIX | Any single special character except `@` (`Ex: . or / or * or , etc.`)
-TENOR_API_KEY | Your tenor API key if you have. Or use this public one: `AIzaSyCyouca1_KKy4W_MG1xsPzuku5oa8W358c`
-  
-<br>
-      
-- Next start deploy and wait for 3-4 minutes.
-- After it's done click on `Manage App`.
-- Next go to `Recources` then turn on `Web: npm start` and disable other one `If there is any other button.`
-- After that go to More ---> view logs and wait for qr to appear.
-- When you see broken QRs are appearing chick on `Open app` and put your Previously copied `Session ID` and click on `Get QR`.
-- Scan the QR from WhatsApp ---> Linked devices ---> Link a device.
-      
-<br><br>      
-      
-    
-      
-## 🔷 Railway Deploy:   
-- [Fork Main Repo](https://github.com/FantoX/Atlas-MD/fork)
-- Create a MongoDB URL. Need help? Watch this short 1 minute [Video Guide](https://youtube.com/shorts/pIHvoXkwmq4?feature=share) for MongoDB URL.
-- Click on `Deploy to Railway` button ( `For those who didn't modified bot.`). If you modified bot and want to deploy your modified version in Railway then that button will not help you. Go to Railway website and deploy github repo from there manually.
-- Those who are deploying through button: Put all necessary details there according to instructions given there.
-- Those who are deploying manually from Railway website put these `Enviroment Variables` before start deploying ( Mandatory).
-      
-<br>
-      
-KEY | VALUE
--- | --
-MODS | Phone numbers in this format (`918101187876`,`925897863489`) without `+` or `SPACE`.
-MONGODB | Your MongoDB URL
-SESSION_ID | Any random value (`EX: gwfdrte5678`) and `keep it copied`.
-PREFIX | Any single special character except `@` (`Ex: . or / or * or , etc.`)
-TENOR_API_KEY | Your tenor API key if you have. Or use this public one: `AIzaSyCyouca1_KKy4W_MG1xsPzuku5oa8W358c`
-  
-<br>      
- 
-- 5-6 minutes later when Deploy is completed click on that generated domain to go to QR page.
-- just put your Previously copied `Session ID` and click on `Get QR`.
-- Scan the QR from WhatsApp ---> Linked devices ---> Link a device.
-- If you are having issues follow [Railway Deploy Tutorial](https://youtu.be/Qs6ryWnEtu8).
-      
-<br><br> 
-      
-      
-      
-      
-## ❇️ Koyeb Deploy:   
-- [Fork Main Repo](https://github.com/FantoX/Atlas-MD/fork)
-- Create a MongoDB URL. Need help? Watch this short 1 minute [Video Guide](https://youtube.com/shorts/pIHvoXkwmq4?feature=share) for MongoDB URL.
-- Click on `Deploy to Railway` button ( `For those who didn't modified bot.`). If you modified bot and want to deploy your modified version `I'm sorry to say as Koyeb works through Quay.io hosted docker so you can't deploy your modified version in fully 100% working state.` Though you can deploy manually your Github repo in Koyeb but in that case bot's 100% commands will not work.
-- Those who are deploying through button: Put all necessary details there according to instructions given there (Don't forget to change MongoDB URL an put your URL).
-- Those who are deploying manually from Koyeb website put these `Enviroment Variables` before start deploying ( Mandatory).
-      
-<br>
-      
-KEY | VALUE
--- | --
-MODS | Phone numbers in this format (`918101187876`,`925897863489`) without `+` or `SPACE`.
-MONGODB | Your MongoDB URL
-SESSION_ID | Any random value (`EX: gwfdrte5678`) and `keep it copied`.
-PREFIX | Any single special character except `@` (`Ex: . or / or * or , etc.`)
-TENOR_API_KEY | Your tenor API key if you have. Or use this public one: `AIzaSyCyouca1_KKy4W_MG1xsPzuku5oa8W358c`
-  
-<br>
-      
-- 10 minutes later when Deploy is completed click on that generated weblink to go to QR page.
-- just put your Previously copied `Session ID` and click on `Get QR`.
-- Scan the QR from WhatsApp ---> Linked devices ---> Link a device.
-- If you are having issues follow [Koyeb Deploy Tutorial](https://youtu.be/OvNnpK1Gx6Y).  
-  
-
-<br><br>
-      
-  
-## 🪟 CMD / VS Code / Powershell / Terminal Deployment Method 
-
-- [Download Updated code](https://github.com/FantoX/Atlas-MD/archive/refs/heads/main.zip) from Main GitHub Repo or Download from your Forked Repo.
-- Extract the `.zip` and open Vs code / Cmd / Powershell / Terminal in that directory and give thesse following commands one-by-one:
-- Rename `.env.example` to `.env` and fill in the required details in `.env` file and `config.js` (Mandatory).
-
-```
-npm i
+# 4. Start the bot
 npm start
 ```
 
-- To get new QR if you logged out from the WhatsApp linked device section go to `.env` file and change `SESSION_ID` to any random string and save it by clicking on `Commit Changes`.
+Scan the QR that appears in your browser via **WhatsApp → Linked Devices → Link a device**.
 
-### ✧ Requirements for CMD/VS code istallation:
-- [Node.js](https://nodejs.org/en/download/)
-- [Git](https://github.com/git-guides/install-git)
-- FFmpeg ( [for Windows](https://www.geeksforgeeks.org/how-to-install-ffmpeg-on-windows/) or [for Linux](https://www.tecmint.com/install-ffmpeg-in-linux/) or [for Mac](https://ffmpeg.org/download.html) )
-- Libwebp (Not necesary for Windows).
-
-Note: If you don't pre-install these before CMD / VS code Installation bot will not start!
-</br> 
+> **Lost your session?** Change `SESSION_ID` to any new random value in `.env` and restart.
 
 ---
-<br>  
-      
 
-## 🐧 UserLand Deployment Method (Not Recommented a bit)
+## 🐧 Android (UserLand) Installation
 
-
-#### ⚜️ Download `UserLand` application old version ( 3.1.2 ) from [Here](https://m.apkpure.com/userland-linux-on-android/tech.ula/variant/3.1.2-APK).
-#### ⚜️ Install `Debian` terminal in userland.
-#### ⚜️ Rename `.env.example` to `.env` and fill in the required details in `.env` file and `config.js` (Mandatory).
-
-</p>
-
-### UserLand commands:
-
-
-```
-sudo apt update
-sudo apt upgrade
-sudo apt install bash
-sudo apt-get install libwebp-dev
-sudo apt install git
-sudo apt install nodejs -y
-sudo apt install ffmpeg -y
-sudo apt install wget
-sudo apt install npm
-sudo apt install imagemagick
+```bash
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y bash git nodejs npm ffmpeg libwebp-dev imagemagick wget curl
 
 git clone https://github.com/FantoX/Atlas-MD
-
-ls
 cd Atlas-MD
-npm i
-
-
-cd
-npm install --global yarn
-yarn add sharp
-sudo apt install curl
-
-
-curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
-
-
-sudo apt-get install -y nodejs
-yarn add sharp
-cd Atlas-MD
-npm i
-npm start
-
-``` 
-- Note in `git clone <my bot's repo>` section your can use Your customised bot's github link too (For that make sure you [Forked](https://github.com/FantoX/Atlas-MD/fork) this repo and modified `.env` file and `config.js`).
-- This method will work on most other bots too.
-
-#### 📌 To stop a bot in Userland
-- Tap on `CTRL` button then tap on `C` from keyboard
-
-#### 📌 To start bot again ( While you are inside Atlas-MD folder {use `cd Atlas-MD` to get inside the folder} )
-- `npm start` or use `yarn start` to start bot again.
-
-
-#### 📌 Start bot after UserLand session is cleared
-```
-cd Atlas-MD
-npm start
-```
-#### 📌 What to do if you logged out from the WhatsApp linked device section and want to get new qr to login
-- Go to your GitHub fork of this bot and open `.env` file and change `SESSION_ID` to any random string and save it by clicking on `Commit Changes`.
-- Then open `UserLand` and run these commands one-by-one:
-
-```
-cd Atlas-MD
-git fetch origin
-git merge origin/main
+npm install
 npm start
 ```
 
-
-#### ⚜️ Note as UserLand is a physical server so you must keep on your internet connection active to make sure bot works. Otherwise bot will be down.
-<br><br>
-
-</details> 
-    
-<br>
-    
-# 🔖 Install plugins
-     
-<details close>
-<summary>Open Plug-in Store</summary>
-
-## 🪟 Economy plug-in
-**〽️ Description:** This plugin conatains all Cashino and Gambling commands. <br><br>
-**🧲️ Plug-in installation url:** 
-```
-https://gist.githubusercontent.com/FantoX/63bcf78d6da0bce7d9f18343e3143fbc/raw/224c92477109f7082f698890fe510874da597d5c/economy.js
-```
-💡 [Plug-in Source Code ↗](https://gist.github.com/FantoX/63bcf78d6da0bce7d9f18343e3143fbc)
-<br><br>
-
-## 🪟 RPG plug-in
-**〽️ Description:** This plugin conatains all RPG game commands. <br><br>
-**🧲️ Plug-in installation url:** 
-```
-https://gist.githubusercontent.com/FantoX/151e440d351549c896042155c223c59c/raw/2fbced16ebd14300f917248801c707d9733118ad/rpg.js
-```
-💡 [Plug-in Source Code ↗](https://gist.github.com/FantoX/151e440d351549c896042155c223c59c)
-<br><br>
-    
-## 🪟 Code-Runner plug-in
-**〽️ Description:** This plugin conatains commands made for Coders <br><br>
-**🧲️ Plug-in installation url:** 
-```
-https://gist.githubusercontent.com/FantoX/8c2b76e4ed2d96eb370379a56f0cf330/raw/d3322fab57c52afd83cf83fc3f5afa493dc4e88f/code-Runner.js
-```
-💡 [Plug-in Source Code ↗](https://gist.github.com/FantoX/8c2b76e4ed2d96eb370379a56f0cf330)
-<br><br>
-
-## 🪟 Audio Edit plug-in
-**〽️ Description:** This plugin conatains 8 audio modification commands using "**ffmpeg**" <br><br>
-**🧲️ Plug-in installation url:** 
-```
-https://gist.githubusercontent.com/FantoX/4e097be1a35b9c00bf0bc9f6635e335b/raw/cc57a7780dd80612b62ded960af3d70d19662956/audio-edit.js
-```
-💡 [Plug-in Source Code ↗](https://gist.github.com/FantoX/4e097be1a35b9c00bf0bc9f6635e335b)
-<br><br>
-
-## 🪟 Image Edit plug-in
-**〽️ Description:** This plugin conatains 4 image manipulation commands.<br><br>
-**🧲️ Plug-in installation url:** 
-```
-https://gist.githubusercontent.com/FantoX/9f6cb696d645a49a98abba00c570cfe9/raw/23154ec10c2ee08558a8aca44389f0a983aa4dea/image-Edit.js
-```
-💡 [Plug-in Source Code ↗](https://gist.github.com/FantoX/9f6cb696d645a49a98abba00c570cfe9)
-<br><br>
-    
-## 🪟 Text to Speech plug-in
-**〽️ Description:** This plugin conatains text-to-speech functionality with 7 languages using "**google text to speech engine**" <br><br>
-**🧲️ Plug-in installation url:** 
-```
-https://gist.githubusercontent.com/FantoX/998a3b2937080af7c30a2639544fa24c/raw/afc9ba94cbaea95e971e3aea3f80e492249c75d7/text-to-speech.js
-```
-💡 [Plug-in Source Code ↗](https://gist.github.com/FantoX/998a3b2937080af7c30a2639544fa24c)
-<br><br>
-    
-## 🪟 Logo Maker plug-in
-**〽️ Description:** This plugin conatains 40 logo maker commands. <br><br>
-**🧲️ Plug-in installation url:** 
-```
-https://gist.githubusercontent.com/FantoX/67035f308b809aaabad8faa001fe473d/raw/72c2b3c100471375755817119c7ab391985bd7f3/logo-maker.js
-```
-💡 [Plug-in Source Code ↗](https://gist.github.com/FantoX/67035f308b809aaabad8faa001fe473d)
-<br><br>
-    
-## 🪟 Chat GPT plug-in
-**〽️ Description:** This plugin conatains 2 main Open AI tools which are "**ChatGPT**" and "**Dall-E**" with automatic public API fallbacks. <br><br>
-**🧲️ Plug-in installation url:** 
-```
-https://gist.githubusercontent.com/FantoX/04507d2d7411996622513759ea05775d/raw/7d27fc2bb2f6d8a45d3e929e3904c66895d811ad/chat-GPT.js
-```
-💡 [Plug-in Source Code ↗](https://gist.github.com/FantoX/04507d2d7411996622513759ea05775d)
-<br><br>
-
-## 🪟 Claude AI plug-in
-**〽️ Description:** Official Anthropic Claude AI integration to access the powerful Claude 3 tier of models with fallback capabilities. <br><br>
-**🧲️ Plug-in path:** `ExtraPlugins_/claude.js`
-<br><br>
-
-## 🪟 Gemini AI plug-in
-**〽️ Description:** Official Google Gemini AI integration to access standard fast text generation via gemini-1.5-flash with fallback capabilities. <br><br>
-**🧲️ Plug-in path:** `ExtraPlugins_/gemini.js`
-<br><br>
-    
-## 🪟 Fun Commands plug-in
-**〽️ Description:** This plugin conatains 17 funny commands. <br><br>
-**🧲️ Plug-in installation url:** 
-```
-https://gist.githubusercontent.com/FantoX/e02ed98798e5cc73a0778d8bc04f0f03/raw/77293b2b35d875ce0c91357d879fe5d0881423b9/fun.js
-```
-💡 [Plug-in Source Code ↗](https://gist.github.com/FantoX/e02ed98798e5cc73a0778d8bc04f0f03)
-<br><br>
-    
-## 🪟 Tiktok Downloader plug-in
-**〽️ Description:** This plugin conatains 4 tiktok video downloader commands. <br><br>
-**🧲️ Plug-in installation url:** 
-```
-https://gist.githubusercontent.com/FantoX/2de67bc72021805417cbd317385ea71a/raw/f70879fc861dadd440f4a4a7dbb01cdae44b3c56/tiktokdl.js
-```
-💡 [Plug-in Source Code ↗](https://gist.github.com/FantoX/2de67bc72021805417cbd317385ea71a)
-<br><br>
-    
-## 🪟 Anime NSFW Image plug-in
-**〽️ Description:** This plugin conatains 100 anime NSFW image commands using my own API<br><br>
-**🧲️ Plug-in will be back soon...** 
-
-<br><br>
-
-
-</details> 
-
-<br><br>  
-    
-    
-
-<h4 align="center"> Join my WhatsApp Group for Discussion / Suggestion / Help.
-</h4>
-
-<p align="center" >
-<a href="https://cutt.ly/AtlasSupportStrict"><img src="https://img.shields.io/badge/Join Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" width="140px">
-</a>
-</p>
-    
----
-<br>
-    
-
-# ⚡️ Atlas Platform Compatibility:
-<br>
-
-- Atlas offers highest platform compatibility.
-- Just deploy and use on your favourite platform.
-- Sorted by Recommendation: Repl.it, Railway, Heroku, Koyeb
-      
-<br>
-      
-# 💫 Dependencies of Atlas:
-
-<br>
-
-- [WhiskeySockets Baileys V-6.1.0](https://github.com/WhiskeySockets/Baileys)
-- [Scrappy API (For Instagram, Facebook, Lyrics and ❌videos scraping )](https://github.com/FantoX/Scrappy-API)
-- [FantoX APIs ( For NSFW )](https://fantox-api.vercel.app/)
-
-<br>
+**Stop bot:** `Ctrl + C` &nbsp;|&nbsp; **Restart:** `npm start` &nbsp;|&nbsp; **Update session:** edit `SESSION_ID` in `.env`, then `git pull && npm start`
 
 ---
-# 🎀 Key Features:
 
+## 📋 Complete Command Reference
 
-<details close>
-<summary>Read More</summary>
-      
-<br>
+### 🤖 System Commands
 
-- Read [PublicKeys.md](https://github.com/FantoX/Atlas-MD/blob/main/PublicKeys.md) to use our `provided public keys` if you are lazy to create your own. We have already provided everying you need to run the bot.
-- Changeable between `20 added Characters` ( Atlas, Power, Makima, Denji, Zero Two, Chika, Miku, Marin Kitagawa ) and more can be added by user inside `BotCharacters.js` file. Type `-charlist` command to get character list.
-- Fully powered by MongoDb ( 3 databases added ).
-- Self / Public / Private mode.
-- Single prefix ( "-" ).
-- RPG and Economy added ( More coming soon ).
-- Built-in Generative AI integrations including official ChatGPT, Claude, and Gemini with public API fallbacks for endless conversations.
-- Group Chatbot / Dm Chatbot ( Only reply on quoted messages and and be turned off ).
-- 100+ NSFW commands ( Using my own API ). Visit: [My API Page](https://fantox-api.vercel.app) for more info. 
-- Highest Commands and Features.
-- User Banning / Group Banning.
-- Highest Security compared to most other public bots.
-
-</details>    
-    
-<br>
-     
-
-# 〽️ Why Should You Use Atlas as your Base:
-
-      
-<details close>
-<summary>Read More</summary>
-
-<br>
-
-- Atlas is a `fully open source` bot which means `no copyright`.
-- Atlas is a `multi character bot` which means you can `change bot's character` to any of the 8 added characters or add more characters by yourself.
-- Atlas is a `multi database bot` which means you can use 3 different databases at the same time.
-- Atlas is a `multi mode` bot which means you can use it in `Self / Public / Private` mode.
-- Atlas has a pre installed chatbot which means you can use it as a `group chatbot and dm chatbot`.
-- Atlas has `Highest NSFW (100+)` which means you can use it as a `nsfw bot`.
-- Atlas has 300+ commands.
-- Atlas doesn't store your `Session File` locally which means it's `safe` and `secure`.
-- Atlas has `RPG and Economy` which means you can use it as a `RPG Bot` or `Casino Bot`.
-- Atlas has `User Banning / Group Banning` which means you can use it as a `Anti Spam Bot`.
-- Atlas is a Folder Type bot which represents `Highest Stability`, `Highest Performance` and `Developer / User friendly`.
-- Atlas comes with [MIT](https://github.com/FantoX/Atlas-MD/blob/main/LICENSE.md) License which means you can use it as a `base for your own bot` and can `modify it as you want` and can `add your own features`.
-
-</details> 
-    
-<br>
-      
-
-
-# 🧣 Contributors:
-
-- Check [Atlas Contributors](https://github.com/FantoX/Atlas-MD/graphs/contributors) list.
-- Feel free to contribute in this project it increase it's stability and update. I will merge your respected contribution after reviewing it.
-- No personal modification / re-branding ( Changing bot name, owner name ) pull requests will be merged !
-    
-<br><br>
-
-# ⚠️ Warning:
-    
-- This bot is not made by WhatsApp.inc so overusing this bot may result in WhatsApp account ban.
-- We will only assist you in `Bot Deployment ( Installation or Hosting )`. Not in `Bot Development`.
-- If you Modify this bot and face any issues, I am not responsible for that because it's not possible for me or my team to help everyone in bot Development / Modification. Only modify if you know what you are doing.
-- This bot is made for `Educational / Fun / Group Management` purposes only. Myself and the team will not be responsible for any misuse of this bot.
-- We will only assist you in `Setup / Deployment` of this bot.
-
-<br><br>
-
-# 📛 Legal Disclaimer
-
-- We suggest you to use your `Own MongoDB URL` while deploying inside `.env` or `Environment Variables`. That will increase your Privacy and Security.
-- We don't recommend to hardly modify the script. `If you do so, you will be responsible for any issues / bugs and we will not provide any support` as we are also busy in our life.
-- We will not be responsible for any issues caused by any individual hosting this bot and cause any harm to any Group `(So don't make someone Group Admin who you don't know just because they are hosting the Bot)`.
-
-<br><br>
+| Command | Aliases | Description |
+|---------|---------|-------------|
+| `-help` | `-h`, `-menu` | Dynamic help menu listing all commands |
+| `-alive` | `-ping`, `-status`, `-uptime`, `-sys`, `-runtime` | System status: RAM, CPU, uptime, environment, version |
+| `-script` | `-sc` | GitHub repo stats (forks, stars, license, size) |
+| `-support` | `-supportgc` | Get the support group link |
+| `-restart` | `-reboot` | Restart the bot *(Owner only)* |
 
 ---
-<br>
 
-<h2 align="center">🔰 Meet Team Atlas 🔰
-</h2>
+### 🛡️ Moderator / Owner Commands
+
+| Command | Aliases | Description |
+|---------|---------|-------------|
+| `-addmod` | `-setmod` | Add a moderator (tag or reply to user) |
+| `-delmod` | `-removemod` | Remove a moderator |
+| `-mods` | `-modlist`, `-owner`, `-owners` | List all owners and added mods |
+| `-ban` | `-banuser` | Ban a user — bot silently ignores all their messages |
+| `-unban` | `-unbanuser` | Unban a user |
+| `-banlist` | `-listbans` | List all banned users and groups (with group names) |
+| `-bangroup` | `-bangc` | Ban a group — bot goes completely silent in it |
+| `-unbangroup` | `-unbangc` | Unban a group |
+| `-mode` | `-setbotmode` | Set bot mode: `self` / `private` / `public` |
+| `-setchar` | — | Switch bot character by ID (0–19) |
+| `-charlist` | `-characters` | View all 20 available bot characters |
+| `-pmchatbot` | `-dmchatbot` | Toggle private/DM chatbot `on` / `off` |
+| `-getcmd` | `-getplugin`, `-cmdfile` | Get the plugin file that handles a given command |
+
+---
+
+### 👥 Group Management Commands
+
+| Command | Aliases | Description |
+|---------|---------|-------------|
+| `-admins` | `-admin` | Tag all group admins |
+| `-tagall` | — | Tag all group members with a message |
+| `-hidetag` | `-htag` | Tag all members silently (invisible ping) |
+| `-promote` | — | Promote a member to admin |
+| `-demote` | — | Demote an admin to member |
+| `-remove` | — | Remove a member from the group |
+| `-setgcname` | — | Change the group name |
+| `-setgcdesc` | — | Change the group description |
+| `-setppgc` | — | Change the group profile picture |
+| `-gcinfo` | `-groupinfo` | Show group info (members, admins, creation date) |
+| `-gclink` | `-grouplink` | Get the group invite link |
+| `-revoke` | — | Reset / revoke the group invite link |
+| `-group` | `-gc` | Open (`open`) or close (`close`) group messaging |
+| `-welcome` | — | Toggle welcome/goodbye messages `on` / `off` |
+| `-antilink` | — | Toggle anti-link protection `on` / `off` |
+| `-chatbotgc` | — | Toggle group AI chatbot `on` / `off` |
+| `-delete` | `-del` | Delete a quoted message |
+| `-leave` | — | Make the bot leave the group |
+
+---
+
+### 🔍 Search Commands
+
+| Command | Aliases | Description |
+|---------|---------|-------------|
+| `-google` | `-search` | Google search — returns 10 results with links & descriptions |
+| `-lyrics` | — | Search and fetch song lyrics |
+| `-yts` | `-youtubesearch` | YouTube video search results |
+| `-weather` | — | Weather report for any city |
+| `-github` | `-gh` | GitHub user profile info |
+| `-wiki` | `-wikipedia` | Wikipedia article summary (up to 800 chars) |
+| `-wallpaper` | `-wall` | Search HD wallpapers |
+| `-ringtone` | — | Search and send a ringtone audio |
+| `-stickersearch` | `-getsticker` | Search Tenor GIFs and send as animated sticker |
+
+---
+
+### 🖼️ Picture / Image Commands
+
+| Command | Aliases | Description |
+|---------|---------|-------------|
+| `-image` | `-gimage`, `-googleimage`, `-gig` | Bing image search |
+| `-gif` | `-gifsearch` | Tenor GIF search (sends as video GIF) |
+| `-pin` | `-pinterest` | Pinterest image search |
+| `-couplepp` | `-ppcouple` | Get a random couple profile picture pair |
+
+---
+
+### 🎬 YouTube Commands
+
+| Command | Aliases | Description |
+|---------|---------|-------------|
+| `-play` | `-song`, `-yt` | Search YouTube by name and download as audio |
+| `-mp3` | `-ytmp3` | Download YouTube audio by link |
+| `-mp4` | `-ytmp4`, `-video` | Download YouTube video by name or link |
+| `-ytsearch` | `-yts` | YouTube search results with thumbnails |
+
+---
+
+### 📥 Universal Downloader
+
+**Command:** `-dl <url>` &nbsp;|&nbsp; **Alias:** `-download`
+
+Paste any link — the bot auto-detects the platform and downloads:
+
+| Platform | Type |
+|----------|------|
+| **TikTok** | Video + Slideshow images |
+| **Instagram** | Photos & Videos |
+| **Pinterest** | Images / Videos / GIFs |
+| **Facebook** | Videos & Photos |
+| **Twitter / X** | Videos & Images |
+| **Threads** | Videos & Images |
+| **Videy** | Video |
+| **Mega.nz** | Files |
+| **SoundCloud** | Audio |
+| **Spotify** | Audio (MP3) |
+| **YouTube** | Audio (MP3) |
+| **Sfile** | Files |
+| **MediaFire** | Files |
+
+> Reply to a message containing a link — it works without `-dl` too!
+
+---
+
+### 🎭 Anime Reaction Commands (26)
+
+> Tag or reply to a user to react to them. Uses animated GIFs from the waifu.pics API.
+
+`-bite` &nbsp;`-blush` &nbsp;`-bonk` &nbsp;`-bully` &nbsp;`-cringe` &nbsp;`-cry` &nbsp;`-cuddle` &nbsp;`-dance` &nbsp;`-glomp` &nbsp;`-handhold` &nbsp;`-happy` &nbsp;`-highfive` &nbsp;`-hug` &nbsp;`-kick` &nbsp;`-kill` &nbsp;`-kiss` &nbsp;`-lick` &nbsp;`-nom` &nbsp;`-pat` &nbsp;`-poke` &nbsp;`-slap` &nbsp;`-smile` &nbsp;`-smug` &nbsp;`-wave` &nbsp;`-wink` &nbsp;`-yeet`
+
+---
+
+### 🔖 Sticker Commands
+
+| Command | Aliases | Description |
+|---------|---------|-------------|
+| `-sticker` | `-s` | Create sticker from image or video (≤ 15s) |
+| `-steal` | `-take` | Re-pack a sticker with custom pack/author name |
+| `-stickercrop` | `-scrop` | Create a cropped (non-full) sticker |
+| `-smeme` | `-stickermeme` | Create a meme sticker from an image + caption |
+| `-quote` | `-q` | Create a quote sticker from text or a replied message |
+| `-emojimix` | — | Mix two emojis: `-emojimix 🦉+🤣` (Google Emoji Kitchen) |
+
+---
+
+### 🔄 Converter Commands
+
+| Command | Aliases | Description |
+|---------|---------|-------------|
+| `-toimg` | `-toimage` | Convert a sticker to a PNG image |
+| `-togif` | — | Convert an animated sticker to GIF |
+| `-tomp4` | — | Convert an animated sticker to MP4 video |
+| `-tomp3` | `-toaudio` | Convert video or audio to MP3 |
+| `-tourl` | — | Upload any media and get a direct URL (via Catbox, max 200MB) |
+| `-topdf` | `-imgtopdf` | Convert an image to a PDF document |
+| `-toqr` | — | Convert any URL or text to a QR code image |
+
+---
+
+### 🎮 Fun Commands
+
+| Command | Description |
+|---------|-------------|
+| `-truth` | Get a random truth question (100+ questions) |
+| `-dare` | Get a random dare challenge (100+ dares) |
+| `-coinflip` | Flip a coin — Heads or Tails |
+| `-dice <max>` | Roll a dice with a custom number of sides |
+| `-fact` | Get a random interesting fact |
+
+---
+
+### 🤖 AI Commands
+
+| Command | Aliases | AI Model |
+|---------|---------|---------|
+| `-gemini` | `-ai` | Google Gemini (gemini-flash-lite) |
+| `-chatgpt` | `-gpt` | OpenAI ChatGPT |
+| `-claude` | — | Anthropic Claude |
+
+> Set `GEMINI_API`, `OPENAI_API`, or `CLAUDE_API` in `.env` to enable. Supports multiple comma-separated keys for load distribution.
+
+---
+
+### 🧩 Plugin Manager Commands
+
+| Command | Description |
+|---------|-------------|
+| `-install <url>` | Install a plugin from any URL or GitHub Gist |
+| `-uninstall <name / index / all>` | Uninstall by plugin name, list index number, or `all` |
+| `-plugins` | List all currently installed extra plugins |
+| `-pluginlist` | Browse the official Atlas plugin store |
+
+---
+
+## 🎭 Bot Characters
+
+Switch the bot's personality and profile picture with `-setchar <ID>`. Use `-charlist` to see all.
+
+| ID | Character | Series | ID | Character | Series |
+|----|-----------|--------|----|-----------|--------|
+| 0 | **Atlas MD** | Default | 10 | **Mizuhara** | Rent-A-Girlfriend |
+| 1 | **Power** | Chainsaw Man | 11 | **Rem** | Re:Zero |
+| 2 | **Makima** | Chainsaw Man | 12 | **Sumi** | Rent-A-Girlfriend |
+| 3 | **Denji** | Chainsaw Man | 13 | **Kaguya** | Kaguya-sama |
+| 4 | **Zero Two** | Darling in the FranXX | 14 | **Yumeko** | Kakegurui |
+| 5 | **Chika** | Kaguya-sama | 15 | **Kurumi** | Date A Live |
+| 6 | **Miku** | Vocaloid | 16 | **Mai** | Bunny Girl Senpai |
+| 7 | **Marin** | My Dress-Up Darling | 17 | **Yor** | Spy x Family |
+| 8 | **Ayanokoji** | Classroom of the Elite | 18 | **Shinbou** | Various |
+| 9 | **Ruka** | Rent-A-Girlfriend | 19 | **Eiko** | Various |
+
+---
+
+## 🔖 Plugin Store
+
+Install any plugin with: `-install <url>`
+
+| Plugin | Commands | Install URL |
+|--------|----------|-------------|
+| **Economy** | Casino & gambling | `https://gist.githubusercontent.com/FantoX/63bcf78d6da0bce7d9f18343e3143fbc/raw/224c92477109f7082f698890fe510874da597d5c/economy.js` |
+| **RPG** | RPG game commands | `https://gist.githubusercontent.com/FantoX/151e440d351549c896042155c223c59c/raw/2fbced16ebd14300f917248801c707d9733118ad/rpg.js` |
+| **Code Runner** | Run code in-chat | `https://gist.githubusercontent.com/FantoX/8c2b76e4ed2d96eb370379a56f0cf330/raw/d3322fab57c52afd83cf83fc3f5afa493dc4e88f/code-Runner.js` |
+| **Audio Edit** | 8 audio effects (pitch, bass, echo…) | `https://gist.githubusercontent.com/FantoX/4e097be1a35b9c00bf0bc9f6635e335b/raw/cc57a7780dd80612b62ded960af3d70d19662956/audio-edit.js` |
+| **Image Edit** | 4 image manipulation commands | `https://gist.githubusercontent.com/FantoX/9f6cb696d645a49a98abba00c570cfe9/raw/23154ec10c2ee08558a8aca44389f0a983aa4dea/image-Edit.js` |
+| **Text-to-Speech** | 7 language TTS | `https://gist.githubusercontent.com/FantoX/998a3b2937080af7c30a2639544fa24c/raw/afc9ba94cbaea95e971e3aea3f80e492249c75d7/text-to-speech.js` |
+| **Logo Maker** | 40 logo styles | `https://gist.githubusercontent.com/FantoX/67035f308b809aaabad8faa001fe473d/raw/72c2b3c100471375755817119c7ab391985bd7f3/logo-maker.js` |
+| **ChatGPT** | ChatGPT + DALL-E | `https://gist.githubusercontent.com/FantoX/04507d2d7411996622513759ea05775d/raw/7d27fc2bb2f6d8a45d3e929e3904c66895d811ad/chat-GPT.js` |
+| **TikTok DL** | 4 TikTok downloader commands | `https://gist.githubusercontent.com/FantoX/2de67bc72021805417cbd317385ea71a/raw/f70879fc861dadd440f4a4a7dbb01cdae44b3c56/tiktokdl.js` |
+| **Fun** | 17 fun party commands | `https://gist.githubusercontent.com/FantoX/e02ed98798e5cc73a0778d8bc04f0f03/raw/77293b2b35d875ce0c91357d879fe5d0881423b9/fun.js` |
+| **Gemini AI** | Google Gemini AI | Built-in — `ExtraPlugins_/gemini.js` |
+| **Claude AI** | Anthropic Claude AI | Built-in — `ExtraPlugins_/claude.js` |
+
+---
+
+## 💫 Dependencies
+
+| Package | Purpose |
+|---------|---------|
+| [WhiskeySockets Baileys v7](https://github.com/WhiskeySockets/Baileys) | WhatsApp Multi-Device engine |
+| [MongoDB](https://www.mongodb.com/) | Database for all persistent settings |
+| [ffmpeg-static](https://www.npmjs.com/package/ffmpeg-static) | Bundled FFmpeg — no manual install |
+| [wa-sticker-formatter](https://www.npmjs.com/package/wa-sticker-formatter) | Sticker creation and conversion |
+| [@google/genai](https://www.npmjs.com/package/@google/genai) | Official Google Gemini AI SDK |
+| [@anthropic-ai/sdk](https://www.npmjs.com/package/@anthropic-ai/sdk) | Official Anthropic Claude AI SDK |
+| [openai](https://www.npmjs.com/package/openai) | Official OpenAI SDK |
+
+---
+
+## 〽️ Why Atlas?
+
+- **100% Open Source** — MIT license, fork and modify freely.
+- **300+ Commands** across all plugins, plus a live plugin store for extending without restart.
+- **Triple AI** (ChatGPT + Claude + Gemini) built-in with multi-key pools for rate-limit resilience.
+- **Universal 13-Platform Downloader** — one command, any link.
+- **Silent Banning** — banned users and groups receive zero response; bot acts as if it doesn't exist.
+- **No local session storage** — session is stored in MongoDB for privacy and security.
+- **Platform-agnostic** — works on Railway, Heroku, Koyeb, Render, Docker, pm2, and local.
+- **FFmpeg bundled** — reactions and sticker conversions work out of the box, everywhere.
+
+---
+
+## 🧣 Contributors
+
+Check the full [Contributors list](https://github.com/FantoX/Atlas-MD/graphs/contributors).  
+PRs are welcome! Personal re-branding / bot-name-change PRs will **not** be merged.
+
+---
+
+## ⚠️ Warning
+
+- This bot is **not made by WhatsApp Inc.** — overuse may result in account ban.
+- Support is provided **only for deployment/setup**, not for custom development.
+- Made for **Educational / Fun / Group Management** purposes only. Team Atlas is not responsible for misuse.
+
+---
+
+## 📛 Legal Disclaimer
+
+- Use your **own MongoDB URL** for privacy and security.
+- Heavy modifications are at your own risk — we cannot support every custom fork.
+- We are not responsible for harm caused by individuals running this bot in groups.
+
+---
+
+<h2 align="center">🔰 Meet Team Atlas 🔰</h2>
 
 <h3 align="center">Current Moderators</h3>
 
