@@ -10,6 +10,10 @@ import {
   setGroupChatbot,
   checkGroupChatbot,
   delGroupChatbot,
+  setAntidelete,
+  checkAntidelete,
+  delAntidelete,
+  checkMod,
 } from "../System/MongoDB/MongoDb_Core.js";
 
 const mergedCommands = [
@@ -37,6 +41,8 @@ const mergedCommands = [
   "setppgc",
   "tagall",
   "chatbotgc",
+  "antidel",
+  "antidelete",
 ];
 
 export default {
@@ -61,6 +67,7 @@ export default {
     "setgcdesc",
     "setppgc",
     "chatbotgc",
+    "antidel",
   ],
   description: "All Group Management Commands",
   start: async (
@@ -80,6 +87,7 @@ export default {
       isMedia,
       quoted,
       botNumber,
+      botLid,
       isBotAdmin,
       groupAdmin,
       isAdmin,
@@ -87,15 +95,33 @@ export default {
   ) => {
     const messageSender = m.sender;
     const quotedsender = m.quoted ? m.quoted.sender : mentionByTag[0];
+    // Helper: check if a JID belongs to the bot (handles phone JID, LID, or any format)
+    const isBotJid = (jid) => {
+      if (!jid) return false;
+      if (jid === botNumber || jid === botLid) return true;
+      // Also check via the LID<->JID map
+      const mapped = global.lidToJidMap?.get(jid);
+      if (mapped && (mapped === botNumber || mapped === botLid)) return true;
+      return false;
+    };
     switch (inputCMD) {
       case "admins":
       case "admin": {
         let message;
         if (!isMedia) {
-          message = m.quoted ? m.quoted.msg : "『 *Attention Admins* 』";
+          if (m.quoted) {
+            message = m.quoted.msg || "『 *Attention Admins* 』";
+          } else if (args.length) {
+            message = `『 *Attention Admins* 』\n\n*🎀 Message:* ${args.join(" ")}`;
+          } else {
+            message = "『 *Attention Admins* 』";
+          }
         } else {
-          message =
-            "『 *Attention Admins* 』\n\n*🎀 Message:* Check this Out !";
+          // Capture caption from the quoted media or from args
+          const caption = m.quoted?.msg?.caption || m.msg?.caption || (args.length ? args.join(" ") : "");
+          message = caption
+            ? `『 *Attention Admins* 』\n\n*🎀 Message:* ${caption}`
+            : "『 *Attention Admins* 』\n\n*🎀 Message:* Check this Out !";
         }
         await doReact("🏅");
         Atlas.sendMessage(
@@ -163,6 +189,9 @@ export default {
             );
           }
           const key = { remoteJid: m.from, fromMe: true, id: m.quoted.id };
+          if (!global.botDeletedMsgIds) global.botDeletedMsgIds = new Set();
+          global.botDeletedMsgIds.add(m.quoted.id);
+          setTimeout(() => global.botDeletedMsgIds?.delete(m.quoted.id), 300000);
           await doReact("📛");
           await Atlas.sendMessage(m.from, { delete: key });
         } else {
@@ -178,6 +207,9 @@ export default {
             id: m.quoted.id,
             participant: m.quoted.sender,
           };
+          if (!global.botDeletedMsgIds) global.botDeletedMsgIds = new Set();
+          global.botDeletedMsgIds.add(m.quoted.id);
+          setTimeout(() => global.botDeletedMsgIds?.delete(m.quoted.id), 300000);
           await Atlas.sendMessage(m.from, { delete: key });
         }
         break;
@@ -192,17 +224,17 @@ export default {
           await doReact("❌");
           return m.reply(`*Bot* must be *Admin* in order to use this Command!`);
         }
-        if (quotedsender.includes(m.sender)) {
+        if (!text && !m.quoted) {
+          await doReact("❔");
+          return m.reply(`Please tag a user or reply to their message to *Demote* !`);
+        }
+        if (quotedsender && quotedsender === m.sender) {
           await doReact("❌");
           return m.reply(`You can't demote yourself !`);
         }
-        if (quotedsender.includes(botNumber)) {
+        if (isBotJid(quotedsender)) {
           await doReact("❌");
           return m.reply(`Sorry, I can't demote myself !`);
-        }
-        if (!text && !m.quoted) {
-          await doReact("❔");
-          return m.reply(`Please tag an user to *Demote*!`);
         }
         const mentionedUser = m.quoted ? m.quoted.sender : mentionByTag[0];
         const userId = mentionedUser || m.msg.contextInfo.participant;
@@ -215,6 +247,16 @@ export default {
             },
             { quoted: m },
           );
+        }
+        // Cannot demote the bot itself (second check after userId is resolved)
+        if (isBotJid(userId)) {
+          await doReact("❌");
+          return m.reply(`Sorry, I can't demote myself !`);
+        }
+        // Cannot demote the group creator
+        if (metadata.owner && (userId === metadata.owner || userId.replace(/[^0-9]/g, "") === metadata.owner.replace(/[^0-9]/g, ""))) {
+          await doReact("❌");
+          return m.reply(`*Command Rejected !* You cannot demote the *Group Creator* !`);
         }
         await doReact("📉");
         try {
@@ -353,14 +395,18 @@ export default {
         }
         let message2;
         if (!isMedia) {
-          message2 = m.quoted
-            ? m.quoted.msg
-            : args[0]
-              ? args.join(" ")
-              : "『 *Attention Everybody* 』";
+          if (m.quoted) {
+            message2 = m.quoted.msg || "『 *Attention Everybody* 』";
+          } else if (args.length) {
+            message2 = `『 *Attention Everybody* 』\n\n*🎀 Message:* ${args.join(" ")}`;
+          } else {
+            message2 = "『 *Attention Everybody* 』";
+          }
         } else {
-          message2 =
-            "『 *Attention Everybody* 』\n\n*🎀 Message:* Check this Out !";
+          const caption = m.quoted?.msg?.caption || m.msg?.caption || (args.length ? args.join(" ") : "");
+          message2 = caption
+            ? `『 *Attention Everybody* 』\n\n*🎀 Message:* ${caption}`
+            : "『 *Attention Everybody* 』\n\n*🎀 Message:* Check this Out !";
         }
         await doReact("🎌");
         Atlas.sendMessage(
@@ -372,9 +418,14 @@ export default {
       }
 
       case "leave": {
-        if (!isAdmin) {
+        // Only bot owners and mods can force the bot to leave
+        const isOwnerForLeave = (global.owner || []).some(
+          (o) => o.replace(/[^0-9]/g, "") === m.sender.replace(/[^0-9]/g, ""),
+        );
+        const isModForLeave = await checkMod(m.sender);
+        if (!isOwnerForLeave && !isModForLeave) {
           await doReact("❌");
-          return m.reply(`*You* must be *Admin* in order to use this Command!`);
+          return m.reply(`Only *Bot Owners* and *Mods* can use this command !`);
         }
         await doReact("👋");
         try {
@@ -404,17 +455,17 @@ export default {
           await doReact("❌");
           return m.reply(`*Bot* must be *Admin* in order to use this Command!`);
         }
-        if (quotedsender.includes(m.sender)) {
+        if (!text && !m.quoted) {
+          await doReact("❔");
+          return m.reply(`Please tag a user or reply to their message to *Promote* !`);
+        }
+        if (quotedsender && quotedsender === m.sender) {
           await doReact("❌");
           return m.reply(`You are already an *Admin* of this group!`);
         }
-        if (quotedsender.includes(botNumber)) {
+        if (isBotJid(quotedsender)) {
           await doReact("❌");
           return m.reply(`I am already an *Admin* of this group!`);
-        }
-        if (!text && !m.quoted) {
-          await doReact("❔");
-          return m.reply(`Please tag an user to *Promote*!`);
         }
         const mentionedUser = m.quoted ? m.quoted.sender : mentionByTag[0];
         const userId = mentionedUser || m.msg.contextInfo.participant;
@@ -461,25 +512,36 @@ export default {
           await doReact("❌");
           return m.reply(`*Bot* must be *Admin* in order to use this Command!`);
         }
-        if (quotedsender.includes(m.sender)) {
-          await doReact("❌");
-          return m.reply(`You cannot *Remove* yourself from this group !`);
-        }
-        if (quotedsender.includes(botNumber)) {
-          await doReact("❌");
-          return m.reply(`I cannot *Remove* myself from this group !`);
-        }
         if (!text && !m.quoted) {
           await doReact("❔");
           return Atlas.sendMessage(
             m.from,
-            { text: `Please tag a user to *Remove* !` },
+            { text: `Please tag a user or reply to their message to *Remove* !` },
             { quoted: m },
           );
+        }
+        if (quotedsender && quotedsender === m.sender) {
+          await doReact("❌");
+          return m.reply(`You cannot *Remove* yourself from this group !`);
+        }
+        if (isBotJid(quotedsender)) {
+          await doReact("❌");
+          return m.reply(`I cannot *Remove* myself from this group !`);
         }
         const mentionedUser = m.quoted ? m.quoted.sender : mentionByTag[0];
         const users = mentionedUser || m.msg.contextInfo.participant;
         await doReact("⛔");
+        // Cannot remove the group creator
+        if (metadata.owner && (users === metadata.owner || users.replace(/[^0-9]/g, "") === metadata.owner.replace(/[^0-9]/g, ""))) {
+          await doReact("❌");
+          return m.reply(`*Command Rejected !* You cannot remove the *Group Creator* !`);
+        }
+        // Cannot remove bot owners
+        const ownerDigits = (global.owner || []).map((o) => o.replace(/[^0-9]/g, ""));
+        if (ownerDigits.includes(users.replace(/[^0-9]/g, ""))) {
+          await doReact("❌");
+          return m.reply(`*Command Rejected !* You cannot remove a *Bot Owner* !`);
+        }
         if (groupAdmin.includes(users)) {
           return Atlas.sendMessage(
             m.from,
@@ -633,13 +695,17 @@ export default {
           await doReact("❌");
           return m.reply(`*Bot* must be *Admin* in order to use this Command!`);
         }
-        const message2 = !isMedia
-          ? m.quoted
-            ? m.quoted.msg
+        let message2;
+        if (!isMedia) {
+          message2 = m.quoted
+            ? (m.quoted.msg || "No message")
             : args[0]
               ? args.join(" ")
-              : "No message"
-          : "Check this Out !";
+              : "No message";
+        } else {
+          const caption = m.quoted?.msg?.caption || m.msg?.caption || (args.length ? args.join(" ") : "");
+          message2 = caption || "Check this Out !";
+        }
 
         let mess = `            『 *Attention Everybody* 』
 
@@ -782,6 +848,46 @@ export default {
           await doReact("❔");
           return m.reply(
             `Please provide On / Off action !\n\n*Example:*\n\n${prefix}welcome on`,
+          );
+        }
+        break;
+      }
+
+      case "antidel":
+      case "antidelete": {
+        if (!isAdmin) {
+          await doReact("❌");
+          return m.reply(`*You* must be *Admin* in order to use this Command!`);
+        }
+        if (!text) {
+          await doReact("❔");
+          return m.reply(
+            `Please provide On / Off action !\n\n*Example:*\n\n${prefix}antidel on`,
+          );
+        }
+        const antidelStatus = await checkAntidelete(m.from);
+        if (args[0] == "on") {
+          if (antidelStatus) {
+            await doReact("❌");
+            return m.reply(`*Anti-Delete* is already *Enabled* !`);
+          }
+          await doReact("🛡️");
+          await setAntidelete(m.from);
+          await m.reply(
+            `*Anti-Delete* has been *Enabled* Successfully !\n\nDeleted messages will be resent by the bot.`,
+          );
+        } else if (args[0] == "off") {
+          if (!antidelStatus) {
+            await doReact("❌");
+            return m.reply(`*Anti-Delete* is already *Disabled* !`);
+          }
+          await doReact("🛡️");
+          await delAntidelete(m.from);
+          await m.reply(`*Anti-Delete* has been *Disabled* Successfully !`);
+        } else {
+          await doReact("❔");
+          return m.reply(
+            `Please provide On / Off action !\n\n*Example:*\n\n${prefix}antidel on`,
           );
         }
         break;

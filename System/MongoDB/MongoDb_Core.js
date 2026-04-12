@@ -384,6 +384,54 @@ async function delAntilink(groupID) {
   _setGroup(groupID, { antilink: false });
 }
 
+// SET ANTI-DELETE
+async function setAntidelete(groupID) {
+  const group = await groupData.findOne({ id: groupID });
+  if (!group) {
+    await groupData.create({ id: groupID, antidelete: true });
+  } else if (!group.antidelete) {
+    await groupData.findOneAndUpdate(
+      { id: groupID },
+      { $set: { antidelete: true } },
+    );
+  }
+  _setGroup(groupID, { antidelete: true });
+}
+
+// CHECK ANTI-DELETE STATUS
+async function checkAntidelete(groupID) {
+  const cached = _getGroup(groupID);
+  if (cached?.antidelete !== undefined) return cached.antidelete;
+
+  const group = await groupData.findOne({ id: groupID });
+  if (!group) {
+    _setGroup(groupID, { antidelete: false });
+    return false;
+  }
+  _setGroup(groupID, {
+    antidelete: group.antidelete,
+    antilink: group.antilink,
+    switchWelcome: group.switchWelcome,
+    chatBot: group.chatBot,
+    bangroup: group.bangroup,
+  });
+  return group.antidelete;
+}
+
+// DELETE ANTI-DELETE
+async function delAntidelete(groupID) {
+  const group = await groupData.findOne({ id: groupID });
+  if (!group) {
+    await groupData.create({ id: groupID, antidelete: false });
+  } else if (group.antidelete) {
+    await groupData.findOneAndUpdate(
+      { id: groupID },
+      { $set: { antidelete: false } },
+    );
+  }
+  _setGroup(groupID, { antidelete: false });
+}
+
 // SET GROUP CHATBOT
 async function setGroupChatbot(groupID) {
   const group = await groupData.findOne({ id: groupID });
@@ -604,6 +652,9 @@ export {
   banGroup, // BAN GROUP
   checkBanGroup, // CHECK BAN STATUS OF A GROUP
   unbanGroup, // UNBAN GROUP
+  setAntidelete, // SET ANTI-DELETE
+  checkAntidelete, // CHECK ANTI-DELETE STATUS
+  delAntidelete, // DELETE ANTI-DELETE
   setNSFW, // ENABLE NSFW MODE
   checkNSFW, // CHECK NSFW STATUS
   delNSFW, // DISABLE NSFW MODE

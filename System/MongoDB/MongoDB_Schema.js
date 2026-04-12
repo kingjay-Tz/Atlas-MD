@@ -12,6 +12,7 @@ const db2 = mongoose.createConnection(config.mongodb, options); // You malually 
 const GroupSchema = new mongoose.Schema({
   id: { type: String, unique: true, required: true },
   antilink: { type: Boolean, default: false },
+  antidelete: { type: Boolean, default: false },
   nsfw: { type: Boolean, default: false },
   bangroup: { type: Boolean, default: false },
   chatBot: { type: Boolean, default: false },

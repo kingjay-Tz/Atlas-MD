@@ -263,6 +263,7 @@ export default {
           "logo-maker": { icon: "🎨", label: "ʟᴏɢᴏ ᴍᴀᴋᴇʀ" },
           logo: { icon: "🖼️", label: "ʟᴏɢᴏ ꜱᴛʏʟᴇꜱ" },
           systemcommands: { icon: "⚙️", label: "ꜱʏꜱᴛᴇᴍ" },
+          revive: { icon: "👁️", label: "ᴠɪᴇᴡ ᴏɴᴄᴇ" },
         };
 
         function formatCommands(allCommands) {

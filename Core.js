@@ -259,27 +259,37 @@ export default async (Atlas, m, commands, chatUpdate) => {
       );
     }
 
-    if (isAntilinkOn && m.isGroup && !isAdmin && !isCreator && isBotAdmin) {
-      const linkgce = await Atlas.groupInviteCode(from);
-      if (budy.includes(`https://chat.whatsapp.com/${linkgce}`)) {
-        return;
-      } else if (budy.includes(`https://chat.whatsapp`)) {
-        const bvl = `\`\`\`「  Antilink System  」\`\`\`\n\n*⚠️ Group link detected !*\n\n*🚫 You are not allowed to send group links in this group !*\n`;
-        await Atlas.sendMessage(
-          from,
-          {
+    if (isAntilinkOn && m.isGroup && !isAdmin && !isCreator && !modcheck && !isintegrated() && isBotAdmin) {
+      // Match any URL (http/https)
+      const urlRegex = /https?:\/\/[^\s]+/gi;
+      const detectedUrls = budy.match(urlRegex);
+      if (detectedUrls && detectedUrls.length > 0) {
+        // Allow own group invite link
+        let isOwnLink = false;
+        try {
+          const linkgce = await Atlas.groupInviteCode(from);
+          isOwnLink = detectedUrls.every((u) => u.includes(`chat.whatsapp.com/${linkgce}`));
+        } catch {}
+
+        if (!isOwnLink) {
+          // Track this deletion so anti-delete ignores it
+          if (!global.botDeletedMsgIds) global.botDeletedMsgIds = new Set();
+          global.botDeletedMsgIds.add(m.id);
+          // Auto-cleanup after 5 minutes to prevent memory leak
+          setTimeout(() => global.botDeletedMsgIds?.delete(m.id), 300000);
+
+          // Delete the message
+          await Atlas.sendMessage(from, {
             delete: {
               remoteJid: m.from,
               fromMe: false,
               id: m.id,
               participant: m.sender,
             },
-          },
-          {
-            quoted: m,
-          },
-        );
-        await m.reply(bvl);
+          });
+          const bvl = `\`\`\`「  Antilink System  」\`\`\`\n\n*⚠️ Link detected !*\n\n*🚫 @${m.sender.split("@")[0]}, you are not allowed to send links in this group !*\n`;
+          await Atlas.sendMessage(from, { text: bvl, mentions: [m.sender] }, { quoted: m });
+        }
       }
     }
 
@@ -407,6 +417,7 @@ export default async (Atlas, m, commands, chatUpdate) => {
       inputCMD,
       args,
       botNumber,
+      botLid,
       isCmd,
       isMedia,
       ar,
