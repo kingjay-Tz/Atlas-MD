@@ -246,10 +246,10 @@ export default async (Atlas, m, commands, chatUpdate) => {
     if (body == prefix) {
       await doReact("❌");
       //return m.reply(
-        `Bot is active, type *${prefix}help* to see the list of commands.`,
+       // `Bot is active, type *${prefix}help* to see the list of commands.`,
       );
     }
-    if (body.startsWith(prefix) && !icmd) {
+    //if (body.startsWith(prefix) && !icmd) {
       await doReact("❌");
       //return m.reply(
         `*${budy.replace(
