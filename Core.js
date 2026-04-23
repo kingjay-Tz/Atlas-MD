@@ -245,13 +245,13 @@ export default async (Atlas, m, commands, chatUpdate) => {
 
     if (body == prefix) {
       await doReact("❌");
-      return m.reply(
+      //return m.reply(
         `Bot is active, type *${prefix}help* to see the list of commands.`,
       );
     }
     if (body.startsWith(prefix) && !icmd) {
       await doReact("❌");
-      return m.reply(
+      //return m.reply(
         `*${budy.replace(
           prefix,
           "",
@@ -292,6 +292,28 @@ export default async (Atlas, m, commands, chatUpdate) => {
         }
       }
     }
+// --- GHOST IMAGE MODERATION ---
+if ((type === "imageMessage") && m.isGroup && !isAdmin && !isCreator && !modcheck) {
+    const imageData = await m.download(); // Bot "sees" the photo
+    const prompt = "Is this photo naked, sexually explicit, or NSFW? Answer only with 'Yes' or 'No'.";
+    const result = await fetchGeminiReply(prompt, imageData); // Uses your built-in AI
+
+    if (result.includes("Yes")) {
+        // 1. SILENT DELETE
+        await Atlas.sendMessage(from, { delete: m.key });
+
+        // 2. TRACK STRIKES (Using MongoDB)
+        let userStrikes = await db.get(`strikes_${m.sender}`) || 0;
+        userStrikes++;
+        await db.set(`strikes_${m.sender}`, userStrikes);
+
+        // 3. SILENT KICK ON 5TH STRIKE
+        if (userStrikes >= 5) {
+            await Atlas.groupParticipantsUpdate(from, [m.sender], 'remove');
+            await db.delete(`strikes_${m.sender}`); // Reset after kick
+        }
+    }
+}
 
     const fetchGeminiReply = async (promptText) => {
       const fetchFallback = async (text) => {
@@ -345,7 +367,7 @@ export default async (Atlas, m, commands, chatUpdate) => {
         try {
           await Atlas.sendPresenceUpdate('composing', m.from);
           const txtChatbot = await fetchGeminiReply(budy);
-          m.reply(txtChatbot);
+          //m.reply(txtChatbot);
           await Atlas.sendPresenceUpdate('paused', m.from);
         } catch (e) {
           console.error("[ ATLAS ] Group chatbot error:", e.message);
@@ -358,7 +380,7 @@ export default async (Atlas, m, commands, chatUpdate) => {
         try {
           await Atlas.sendPresenceUpdate('composing', m.from);
           const txtChatbot = await fetchGeminiReply(budy);
-          m.reply(txtChatbot);
+          //m.reply(txtChatbot);
           await Atlas.sendPresenceUpdate('paused', m.from);
         } catch (e) {
           console.error("[ ATLAS ] PM chatbot error:", e.message);
