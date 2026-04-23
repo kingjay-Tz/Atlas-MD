@@ -287,8 +287,8 @@ export default async (Atlas, m, commands, chatUpdate) => {
               participant: m.sender,
             },
           });
-          const bvl = `\`\`\`「  Antilink System  」\`\`\`\n\n*⚠️ Link detected !*\n\n*🚫 @${m.sender.split("@")[0]}, you are not allowed to send links in this group !*\n`;
-          await Atlas.sendMessage(from, { text: bvl, mentions: [m.sender] }, { quoted: m });
+          //const bvl = `\`\`\`「  Antilink System  」\`\`\`\n\n*⚠️ Link detected !*\n\n*🚫 @${m.sender.split("@")[0]}, you are not allowed to send links in this group !*\n`;
+          //await Atlas.sendMessage(from, { text: bvl, mentions: [m.sender] }, { quoted: m });
         }
       }
     }
